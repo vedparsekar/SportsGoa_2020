@@ -2,7 +2,7 @@
 session_start();
 include('../conn.inc.php');
 
-error_reporting(0);
+//error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -175,7 +175,7 @@ error_reporting(0);
 						<nav>
 						  <ul>
 							<li>
-							 <a href="#"><span>Home</span></a>
+							 <a href="../homepage.php"><span>Home</span></a>
 							</li>
 								
 							<li>
