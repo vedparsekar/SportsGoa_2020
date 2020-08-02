@@ -1,9 +1,8 @@
 <?php
 	include("header.php");
 	$match_id=73;//$_GET['id'];
-
-$query4="select * from fixtures where match_id='$match_id'";
-$result4 = mysql_query($query4,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
+	$query4="select * from fixtures where match_id='$match_id'";
+	$result4 = mysql_query($query4,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
 if (mysql_num_rows($result4) > 0) { 
 while($row = mysql_fetch_array($result4))
  { 
@@ -16,10 +15,7 @@ while($row = mysql_fetch_array($result4))
 
 }
 }
-
-
 	$query="select * from livescore where match_id='$match_id'";
-
 	$result = mysql_query($query) or die ("Error in query: ".$query. " ".mysql_error());
 
 while($row = mysql_fetch_array($result))
@@ -30,8 +26,6 @@ while($row = mysql_fetch_array($result))
 }
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -62,12 +56,9 @@ while($row = mysql_fetch_array($result))
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  
-  
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-
-      <link rel="stylesheet" href="css/style.css">    </style>
-<title>LIVE SCORE</title>
+  	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="css/style.css">    </style>
+	<title>LIVE SCORE</title>
 	<style type="text/css">
 
 		.score{
@@ -131,17 +122,12 @@ while($row = mysql_fetch_array($result))
 		#onebutton
 		{
 			height: 50px;
-			width:  50px;
-			
-		
+			width:  50px;	
 		}
 		#minusbutton
 		{
 			height: 50px;
 			width:  50px;
-			
-		
-
 		}
 		.twobutton
 		{
@@ -174,9 +160,6 @@ while($row = mysql_fetch_array($result))
 		}
 	}
 
-
-
-
 		function ps()
 	{
 	    var value = parseInt(document.getElementById('team2').value);
@@ -194,7 +177,6 @@ while($row = mysql_fetch_array($result))
 	}
 
 	</script>
-
 </head>
 <body>
    
@@ -239,8 +221,7 @@ while($row = mysql_fetch_array($result))
 
 <?php
 
-		mysql_connect("localhost","root","")or die("could not connect to server");
-
+	mysql_connect("localhost","root","")or die("could not connect to server");
 	mysql_select_db("sportsgoa")or die("database not found");
 	
 //isset is used to check the value if it is present inside that tag
@@ -263,7 +244,5 @@ if (isset($_GET['button']))
 		header("location:add_football_livescore.php");
 	}
 }
-
-	
 
 ?>
