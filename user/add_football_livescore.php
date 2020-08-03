@@ -63,14 +63,22 @@ while($row = mysql_fetch_array($result))
 
 		.score{
 			float:center;
-			margin-left:10%;
-			margin-right:10%;
+			background-image: url("../content/world/img/match/match-bg.jpg"),
+			linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    		background-blend-mode: overlay;
+			
 		}
 		.end{
 			display: grid;
 			grid-template-columns: 1fr;
 			justify-items: center;
 			padding:5%;
+		}
+		.ed{
+			background-color: #f81f29;
+			color: white;
+			padding: 5px;
+			border-radius: 5px;
 		}
 		.scr {
 			display: grid;
@@ -90,6 +98,8 @@ while($row = mysql_fetch_array($result))
 			grid-template-columns: 1fr;
 			justify-items: center;
 			padding:1%;
+			background-color: #f81f29;
+			color: white;
 		}
 		
 		.s2{
@@ -108,6 +118,7 @@ while($row = mysql_fetch_array($result))
 			text-align: center;
 			font-size:70px;
 			border-radius: 20px;
+			border-style: none;
 
 		}
 		.screen2
@@ -118,26 +129,49 @@ while($row = mysql_fetch_array($result))
 			text-align: center;
 			font-size:70px;
 			border-radius: 20px;
+			border-style: none;
 		}
 		#onebutton
 		{
 			height: 50px;
 			width:  50px;	
+			background-color: #1fc90f;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		#minusbutton
 		{
 			height: 50px;
 			width:  50px;
+			background-color: #f81f29;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		.twobutton
 		{
 			height: 50px;
-			width:  50px;
+			width:  50px;	
+			background-color: #1fc90f;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		.minusbutton2
 		{
 			height: 50px;
 			width:  50px;
+			background-color: #f81f29;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
+		}
+		.teamname{
+			border-style: none;
+			text-transform: uppercase;
+			font-weight: bold; 
+			text-align: center;
 		}
 	</style>
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -187,7 +221,7 @@ while($row = mysql_fetch_array($result))
 		<div class="scr">
 		<div class="s1">
 			<div>
-				<input type="text" name="" value="<?php echo $team1_name;?>"  readonly></input>
+				<input class="teamname" type="text" name="" value="<?php echo $team1_name;?>"  readonly></input>
 			</div>
 			<div>
 				<input  class="screen1" type="text" name="screen1" id="team1" value="<?php echo $team1;?>" readonly></input>
@@ -200,7 +234,7 @@ while($row = mysql_fetch_array($result))
 	
 		<div class="s2">
 			<div>
-				<input type="text" name="" value="<?php echo $team2_name;?>"  readonly></input>
+				<input type="text" class="teamname" name="" value="<?php echo $team2_name;?>"  readonly></input>
 			</div>
 			<div>
 				<input  class="screen2" type="text" name="screen2" id="team2" value="<?php echo $team2;?>" readonly></input>
@@ -213,9 +247,12 @@ while($row = mysql_fetch_array($result))
 		</div>
 	</form>	
 	<div class="end">
-        <a href="football_live_result.php?id=<?php //echo $match_id; ?>" >  END MATCH </a>
+        <a href="football_live_result.php?id=<?php //echo $match_id; ?>" class="ed">  END MATCH </a>
 	</div>
 </div>
+<?php
+include("../footer.php");
+?>
 </body>
 </html>
 

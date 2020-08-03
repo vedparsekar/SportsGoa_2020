@@ -62,10 +62,7 @@ while($row = mysql_fetch_array($result))
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  
-  
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-
       <link rel="stylesheet" href="css/style.css">    </style>
 <title>LIVE SCORE</title>
 	<style type="text/css">
@@ -132,12 +129,19 @@ while($row = mysql_fetch_array($result))
 		{
 			height: 50px;
 			width:  50px;	
-		
+			background-color: #1fc90f;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		#minusbutton
 		{
 			height: 50px;
-			width:  50px;	
+			width:  50px;
+			background-color: #f81f29;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		.twobutton
 		{
@@ -169,10 +173,6 @@ while($row = mysql_fetch_array($result))
 		document.getElementById("team1").value-=value;
 		}
 	}
-
-
-
-
 		function ps()
 	{
 	    var value = parseInt(document.getElementById('team2').value);
@@ -188,9 +188,7 @@ while($row = mysql_fetch_array($result))
 		document.getElementById("team2").value-=val;
 		}
 	}
-
 	</script>
-
 </head>
 <body>
    

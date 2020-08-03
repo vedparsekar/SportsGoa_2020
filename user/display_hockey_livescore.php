@@ -15,7 +15,7 @@
             width: 100%;
             height: 100vh;
         }
-        h3,h4,h1,p,h2,small{
+        h3,h4,h1{
             color:white;
         }
         .score{
@@ -58,31 +58,23 @@ setInterval(function(){
 
 <div  id="here" class="score-container">
     <div class="score-head">
-        <h3><b>Cricket</b></h3>Team1 v/s Team2
+        <h3><b>Hockey</b></h3>Team1 v/s Team2
     </div>
     <div class="display-score">
         <div>
-            <h3>Team 1</h3>
-			<p>Player1: 12(10)</p>
-			<p>Player2: 34(12)</p>	
+            <h3>Team 1<h3>
         </div>
         <div>
         <h3>V/S</h3>
         </div>
         <div>
-			<h3>Team 2</h3>
-			<p>Bowler1 <small>O(5)  R(23)  ECO(2.30)</small></p>
-			<p>Bowler2 <small>O(5)  R(23)  ECO(2.30)</small></p>
-			<p>Bowler3 <small>O(5)  R(23)  ECO(2.30)</small></p>
+            <h3>Team 2</h3>
         </div>
     </div>
 
     <div class="score">
-	<h1><b>Team1 127/8</b></h1>
-	<h2><b>Over 25.3</b></h2>
-	<small>| 1 6 6 2 0 2 | 1 W 6 4 0 0 |</small><br>
-	<p>team2: 203/8 Overs: 50</p>
-    </div>
+    <h1><b>1 : 3</b></h1>
+        </div>
 </div>
 
 
@@ -118,8 +110,8 @@ setInterval(function(){
 	else
 	{
 		header("location:../homepage.php");
-	}*/
-	include("../footer.php");
+	}
+	include("../footer.php");*/
 ?>
 
 </body>

@@ -13,9 +13,9 @@
         .score-container{
             background-color: #161616;
             width: 100%;
-            height: 100vmin;
+            height: 100vh;
         }
-        h3,h4{
+        h3,h4,h1{
             color:white;
         }
         .score{
@@ -32,12 +32,16 @@
         }
         .score-head{
             background-color:#e20d0d;
+            color: white;
             display: grid;
             justify-items: center;
             padding:2%;
 			grid-template-columns: 1fr;
-			width: 100%;
+            width: 100%;
+            margin-top: 1%;
         }
+
+      
     </style>
 
 </head>
@@ -53,13 +57,15 @@ setInterval(function(){
 
 
 <div  id="here" class="score-container">
-    <h3 class="score-head">FOOTBALL</h3>
+    <div class="score-head">
+        <h3><b>Football</b></h3>Team1 v/s Team2
+    </div>
     <div class="display-score">
         <div>
             <h3>Team 1<h3>
         </div>
         <div>
-        <h3>1:3</h3>
+        <h3>V/S</h3>
         </div>
         <div>
             <h3>Team 2</h3>
@@ -67,7 +73,7 @@ setInterval(function(){
     </div>
 
     <div class="score">
-        fff
+    <h1><b>1 : 3</b></h1>
         </div>
 </div>
 
