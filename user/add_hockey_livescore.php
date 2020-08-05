@@ -1,9 +1,8 @@
 <?php
 	include("header.php");
 	$match_id=73;//$_GET['id'];
-
-$query4="select * from fixtures where match_id='$match_id'";
-$result4 = mysql_query($query4,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
+	$query4="select * from fixtures where match_id='$match_id'";
+	$result4 = mysql_query($query4,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
 if (mysql_num_rows($result4) > 0) { 
 while($row = mysql_fetch_array($result4))
  { 
@@ -16,10 +15,7 @@ while($row = mysql_fetch_array($result4))
 
 }
 }
-
-
 	$query="select * from livescore where match_id='$match_id'";
-
 	$result = mysql_query($query) or die ("Error in query: ".$query. " ".mysql_error());
 
 while($row = mysql_fetch_array($result))
@@ -30,8 +26,6 @@ while($row = mysql_fetch_array($result))
 }
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -62,24 +56,29 @@ while($row = mysql_fetch_array($result))
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  
-  
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-
-      <link rel="stylesheet" href="css/style.css">    </style>
-<title>LIVE SCORE</title>
+  	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="css/style.css">    </style>
+	<title>LIVE SCORE</title>
 	<style type="text/css">
 
 		.score{
 			float:center;
-			margin-left:10%;
-			margin-right:10%;
+			background-image: url("../content/world/img/match/match-bg.jpg"),
+			linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    		background-blend-mode: overlay;
+			
 		}
 		.end{
 			display: grid;
 			grid-template-columns: 1fr;
 			justify-items: center;
 			padding:5%;
+		}
+		.ed{
+			background-color: #f81f29;
+			color: white;
+			padding: 5px;
+			border-radius: 5px;
 		}
 		.scr {
 			display: grid;
@@ -99,6 +98,8 @@ while($row = mysql_fetch_array($result))
 			grid-template-columns: 1fr;
 			justify-items: center;
 			padding:1%;
+			background-color: #f81f29;
+			color: white;hu
 		}
 		
 		.s2{
@@ -117,6 +118,7 @@ while($row = mysql_fetch_array($result))
 			text-align: center;
 			font-size:70px;
 			border-radius: 20px;
+			border-style: none;
 
 		}
 		.screen2
@@ -127,31 +129,49 @@ while($row = mysql_fetch_array($result))
 			text-align: center;
 			font-size:70px;
 			border-radius: 20px;
+			border-style: none;
 		}
 		#onebutton
 		{
 			height: 50px;
-			width:  50px;
-			
-		
+			width:  50px;	
+			background-color: #1fc90f;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		#minusbutton
 		{
 			height: 50px;
 			width:  50px;
-			
-		
-
+			background-color: #f81f29;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		.twobutton
 		{
 			height: 50px;
-			width:  50px;
+			width:  50px;	
+			background-color: #1fc90f;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
 		}
 		.minusbutton2
 		{
 			height: 50px;
 			width:  50px;
+			background-color: #f81f29;
+			color: white;
+			border-style: none;
+			border-radius: 5px;
+		}
+		.teamname{
+			border-style: none;
+			text-transform: uppercase;
+			font-weight: bold; 
+			text-align: center;
 		}
 	</style>
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -174,9 +194,6 @@ while($row = mysql_fetch_array($result))
 		}
 	}
 
-
-
-
 		function ps()
 	{
 	    var value = parseInt(document.getElementById('team2').value);
@@ -194,18 +211,17 @@ while($row = mysql_fetch_array($result))
 	}
 
 	</script>
-
 </head>
 <body>
    
 <div class="score">
 	<form method="GET">
-		<h3 class="match">FOOTBALL</h3>
+		<h3 class="match">Hockey</h3>
 		<input type="hidden" name="match_id" id="team123" value="<?php echo $match_id; ?>" ></input><br/>
 		<div class="scr">
 		<div class="s1">
 			<div>
-				<input type="text" name="" value="<?php echo $team1_name;?>"  readonly></input>
+				<input class="teamname" type="text" name="" value="<?php echo $team1_name;?>"  readonly></input>
 			</div>
 			<div>
 				<input  class="screen1" type="text" name="screen1" id="team1" value="<?php echo $team1;?>" readonly></input>
@@ -218,7 +234,7 @@ while($row = mysql_fetch_array($result))
 	
 		<div class="s2">
 			<div>
-				<input type="text" name="" value="<?php echo $team2_name;?>"  readonly></input>
+				<input type="text" class="teamname" name="" value="<?php echo $team2_name;?>"  readonly></input>
 			</div>
 			<div>
 				<input  class="screen2" type="text" name="screen2" id="team2" value="<?php echo $team2;?>" readonly></input>
@@ -231,16 +247,18 @@ while($row = mysql_fetch_array($result))
 		</div>
 	</form>	
 	<div class="end">
-        <a href="football_live_result.php?id=<?php //echo $match_id; ?>" >  END MATCH </a>
+        <a href="football_live_result.php?id=<?php //echo $match_id; ?>" class="ed">  END MATCH </a>
 	</div>
 </div>
+<?php
+include("../footer.php");
+?>
 </body>
 </html>
 
 <?php
 
-		mysql_connect("localhost","root","")or die("could not connect to server");
-
+	mysql_connect("localhost","root","")or die("could not connect to server");
 	mysql_select_db("sportsgoa")or die("database not found");
 	
 //isset is used to check the value if it is present inside that tag
@@ -254,16 +272,14 @@ if (isset($_GET['button']))
 
 	if ($res=mysql_query($query)) 
 	{
-		header("location:add_football_livescore.php");
+		header("location:add_hockey_livescore.php");
 
 	}
 	else
 	{
 		echo "data not inserted";
-		header("location:add_football_livescore.php");
+		header("location:add_hockey_livescore.php");
 	}
 }
-
-	
 
 ?>

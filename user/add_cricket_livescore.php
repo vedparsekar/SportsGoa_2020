@@ -17,11 +17,8 @@ while($row = mysql_fetch_array($result4))
 }
 }
 
-
 	$query="select * from livescore where match_id='$match_id'";
-
 	$result = mysql_query($query) or die ("Error in query: ".$query. " ".mysql_error());
-
 while($row = mysql_fetch_array($result))
  { 
 
@@ -30,9 +27,6 @@ while($row = mysql_fetch_array($result))
 }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,9 +62,11 @@ while($row = mysql_fetch_array($result))
 	<style type="text/css">
 
 		.score{
-			float:center;
-			margin-left:10%;
-			margin-right:10%;
+			display: grid;
+			grid-template-columns: 1fr;
+			background-image: url("../content/world/img/match/match-bg.jpg"),
+			linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    		background-blend-mode: overlay;
 		}
 		.end{
 			display: grid;
@@ -96,6 +92,8 @@ while($row = mysql_fetch_array($result))
 			grid-template-columns: 1fr;
 			justify-items: center;
 			padding:1%;
+			background-color: #f81f29;
+			color: white;
 		}
 		
 		.s2{
@@ -112,7 +110,7 @@ while($row = mysql_fetch_array($result))
 			width: 100px;
 			float:left;
 			text-align: center;
-			font-size:70px;
+			font-size:35px;
 			border-style:none;
 
 		}
@@ -122,7 +120,7 @@ while($row = mysql_fetch_array($result))
 			width: 100px;
 			float:right;
 			text-align: center;
-			font-size:70px;
+			font-size:35px;
 			border-style:none;
 		}
 		#onebutton
@@ -202,16 +200,23 @@ while($row = mysql_fetch_array($result))
 				<input type="text" name="" value="<?php echo $team1_name;?>"  readonly></input>
 			</div>
 			<div>
-				<input  class="screen1" type="text" name="screen1" id="team1" value="<?php echo $team1;?>" readonly></input>
-				<input  class="wicket1" type="text" name="screen2" id="team2" value="<?php echo $team2;?>" readonly></input>
+				<input  class="screen1" type="text" name="screen1" id="team1" value="<?php //echo $team1;?>123/3" readonly></input>
+				<!--<input  class="wicket1" type="text" name="screen2" id="team2" value="<?php echo $team2;?>" readonly></input>-->
+				<h2>24.5</h2>
 			</div>
 			<div>
+				<p>RUNS:</p>
 				<button onclick="pass(this.value)" value="1" id="onebutton" name="button" align="center">+1</button>
 				<button onclick="rass(this.value)" value="1"  id="minusbutton" name="button" align="center">-1</button>
 				<button onclick="ps(this.value)" value="1" class="twobutton" name="button" align="center">6</button>
 				<button onclick="ss(this.value)" value="1" class="minusbutton2" name="button" align="center">4</button>
 				<button onclick="ps(this.value)" value="1" class="twobutton" name="button" align="center">1</button>
 				<button onclick="ss(this.value)" value="1" class="minusbutton2" name="button" align="center">W</button>
+			</div>
+			<div>
+			<p>OVERS:</p>
+				<button onclick="pass(this.value)" value="1" id="onebutton" name="button" align="center">+1</button>
+				<button onclick="rass(this.value)" value="1"  id="minusbutton" name="button" align="center">-1</button>
 			</div>
 		</div>
 	
@@ -220,17 +225,23 @@ while($row = mysql_fetch_array($result))
 				<input type="text" name="" value="<?php echo $team2_name;?>"  readonly></input>
 			</div>
 			<div>
-				<input  class="screen2" type="text" name="screen2" id="team2" value="<?php echo $team2;?>" readonly></input>
-				<input  class="wicket2" type="text" name="screen2" id="team2" value="<?php echo $team2;?>" readonly></input>
-
+				<!--<input  class="screen2" type="text" name="screen2" id="team2" value="<?php //echo $team2;?>9" readonly></input>-->
+				<input  class="wicket2" type="text" name="screen2" id="team2" value="<?php //echo $team2;?>200/9" readonly></input>
+				<h2>49.8</h2>
 			</div>
 			<div>
+			<p>RUNS:</p>
 				<button onclick="ps(this.value)" value="1" class="twobutton" name="button" align="center">+1</button>
 				<button onclick="ss(this.value)" value="1" class="minusbutton2" name="button" align="center">-1</button>
 				<button onclick="ps(this.value)" value="6" class="twobutton" name="button" align="center">6</button>
 				<button onclick="ss(this.value)" value="4" class="minusbutton2" name="button" align="center">4</button>
 				<button onclick="ps(this.value)" value="1" class="twobutton" name="button" align="center">1</button>
 				<button onclick="ss(this.value)" value="1" class="minusbutton2" name="button" align="center">W</button>
+			</div>
+			<div>
+			<p>OVERS:</p>
+				<button onclick="pass(this.value)" value="1" id="onebutton" name="button" align="center">+1</button>
+				<button onclick="rass(this.value)" value="1"  id="minusbutton" name="button" align="center">-1</button>
 			</div>
 		</div>
 		</div>
