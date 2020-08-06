@@ -99,7 +99,7 @@ while($row = mysql_fetch_array($result))
 			justify-items: center;
 			padding:1%;
 			background-color: #f81f29;
-			color: white;hu
+			color: white;
 		}
 		
 		.s2{
