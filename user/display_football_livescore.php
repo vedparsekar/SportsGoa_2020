@@ -11,7 +11,10 @@
     <title></title>
     <style>
         .score-container{
-            background-color: #161616;
+            float:center;
+			background-image: url("../content/world/img/match/match-bg.jpg"),
+			linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    		background-blend-mode: overlay;
             width: 100%;
             height: 100vh;
         }
@@ -58,17 +61,17 @@ setInterval(function(){
 
 <div  id="here" class="score-container">
     <div class="score-head">
-        <h3><b>Football</b></h3>Team1 v/s Team2
+        <h3><b>FOOTBALL</b></h3>BARCELONA  v/s  REAL MADRID
     </div>
     <div class="display-score">
         <div>
-            <h3>Team 1<h3>
+            <h3>BARCELONA<h3>
         </div>
         <div>
         <h3>V/S</h3>
         </div>
         <div>
-            <h3>Team 2</h3>
+            <h3>REAL MADRID</h3>
         </div>
     </div>
 
