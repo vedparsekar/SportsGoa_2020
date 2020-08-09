@@ -487,6 +487,21 @@
 
 }
 
+.evnt-cat{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+
+}
+
+.evnt-form{
+  margin-left: 8%;
+}
+.evnt-p{
+  font-size: 14px;
+}
+
+
 @media screen and (max-width: 650px) {
   .event-heading {
     width: 90%;

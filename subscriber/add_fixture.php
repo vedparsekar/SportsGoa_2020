@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 		

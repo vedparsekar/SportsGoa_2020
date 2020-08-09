@@ -12,6 +12,8 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="text/javascript">
       function getData(ecategory,etype, divid){
@@ -69,30 +71,37 @@
       <!-- Page Content  -->
      <div id="content" class="p-4 p-md-5 pt-5">
         <!--content here  -->  
-        <form method="post">
-            <br>
-            
-            select category
-            <select name="e_category" id="e_category"  class="form-control" onchange="getData(this.value, event_type.value, 'displaydata')" style="width: 150px;">
+      <form method="post" class="evnt-form">
+        <div class="evnt-cat">
+          <div>
+            <p class="evnt-p">select category</p>
+            <select name="e_category" id="e_category"  class="form-control" onchange="getData(this.value, event_type.value, 'displaydata')">
                 <option value="1">All Games</option>
                 <option value="hockey">hockey</option>
                 <option value="volleyball">volleyball</option>
                 <option value="cricket">cricket</option>
                 <option value="football">football</option>
             </select>
-            <br>
-            
-            select event type 
-            <select name="event_type" id="event_type"  class="form-control" onchange="getData(e_category.value, this.value, 'displaydata')" style="width: 150px;margin-top: -85px;margin-left: 200px;">
-              <option value="1">All Events</option>  
-              <option value="local">Local Tournaments</option> 
-              <option value="university">University Tournaments</option>  
-            </select>
-            <br>
-              <input type="button" class="btn btn-success" name="addButton" value="Add Post" style="width: 180px;height: 37px;float: left;margin-top: -61px;margin-left: 400px;color: green;" data-toggle="modal" data-target="#add_post"> 
-            <br>
-              <div class="table" id="displaydata">
-              </div>
+          </div>
+
+          <div>
+            <p class="evnt-p">select event type</p>
+              <select name="event_type" id="event_type"  class="form-control" onchange="getData(e_category.value, this.value, 'displaydata')">
+                <option value="1">All Events</option>  
+                <option value="local">Local Tournaments</option> 
+                <option value="university">University Tournaments</option>  
+              </select>
+          </div>
+
+          <div>
+          <p class="evnt-p">Add Post</p>
+            <input type="button" class="btn btn-success" name="addButton" value="Add Post" data-toggle="modal" data-target="#add_post"> 
+          </div>
+        </div>
+        <br>
+        <div class="table evnt-tble" id="displaydata">
+        </div>
+    
         </form>
 
       <div class="modal fade" id="add_post">
