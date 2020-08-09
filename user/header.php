@@ -220,7 +220,7 @@ error_reporting(0);
                              </li>
 								
 							<li >
-						     <a href="#"><span>About Us</span></a>
+						     <a href="../contact us/contact_us.php"><span>Contact Us</span></a>
 							</li>
 							<?php if (strlen($_SESSION['login']) == 0) { 
 							?>
