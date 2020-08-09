@@ -83,7 +83,129 @@
          $message = 'Data Updated'; 
          mysqli_query($connect, $query);      
       
-      }else if($action == "add_news")
+      }else if($action == "add_fixture")
+      {
+        $t_time = mysqli_real_escape_string($connect, $_POST["t_time"]);  
+        $place = mysqli_real_escape_string($connect, $_POST["place"]);
+        $t_date = mysqli_real_escape_string($connect, $_POST["t_date"]);
+        $team1 = mysqli_real_escape_string($connect, $_POST["team1"]);  
+        $team2 = mysqli_real_escape_string($connect, $_POST["team2"]);
+        $event_id = mysqli_real_escape_string($connect, $_POST["event_id"]);
+        $query = "  
+           INSERT INTO fixtures(event_id, team1, team2, place, t_date, t_time)  
+           VALUES('$event_id', '$team1', '$team2', '$place', '$t_date', '$t_time');  
+           ";  
+           $message = 'Added Record Successfully';  
+           mysqli_query($connect, $query);
+
+      }else if($action == "update_fixture")
+      {
+        $t_time = mysqli_real_escape_string($connect, $_POST["t_time"]);  
+        $match_id = mysqli_real_escape_string($connect, $_POST["match_id"]);  
+        $place = mysqli_real_escape_string($connect, $_POST["place"]);
+        $t_date = mysqli_real_escape_string($connect, $_POST["t_date"]);
+        $team1 = mysqli_real_escape_string($connect, $_POST["team1"]);  
+        $team2 = mysqli_real_escape_string($connect, $_POST["team2"]);
+        $event_id = mysqli_real_escape_string($connect, $_POST["event_id"]);
+        // $query = "  
+        //    INSERT INTO fixtures(event_id, team1, team2, place, t_date, t_time)  
+        //    VALUES('$event_id', '$team1', '$team2', '$place', '$t_date', '$t_time');  
+        //    ";  
+           $query = "  
+         UPDATE fixtures   
+         SET event_id='$event_id',   
+         team1='$team1',
+         team2='$team2',   
+         place='$place',   
+         t_date = '$t_date',   
+         t_time = '$t_time'   
+         WHERE match_id='".$_POST["match_id"]."'";  
+         $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
+
+      }else if($action == "update_volleyball_result")
+      { //-----------------
+        $event_id = mysqli_real_escape_string($connect, $_POST["event_id"]);  
+        $match_id = mysqli_real_escape_string($connect, $_POST["match_id"]);  
+        $result_id = mysqli_real_escape_string($connect, $_POST["result_id"]);
+        $team1_score = mysqli_real_escape_string($connect, $_POST["team1_score"]);
+        $team2_score = mysqli_real_escape_string($connect, $_POST["team2_score"]);  
+        $set1 = mysqli_real_escape_string($connect, $_POST["set1"]);
+        $set2 = mysqli_real_escape_string($connect, $_POST["set2"]);
+        $set3 = mysqli_real_escape_string($connect, $_POST["set3"]);
+        $set4 = mysqli_real_escape_string($connect, $_POST["set4"]);
+        $set5 = mysqli_real_escape_string($connect, $_POST["set5"]);
+        $description = mysqli_real_escape_string($connect, $_POST["description"]);
+         
+         $query = "  
+         UPDATE results   
+         SET event_id='$event_id',   
+         match_id='$match_id',
+         team1_score='$team1_score',
+         team2_score='$team2_score',   
+         set1='$set1',
+         set2='$set2',
+         set3='$set3',
+         set4='$set4',
+         set5='$set5',  
+         description = '$description'    
+         WHERE result_id='$result_id'";  
+         $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
+
+      } else if($action == "update_football_result")
+      { //-----------------
+        $event_id = mysqli_real_escape_string($connect, $_POST["football_event_id"]);  
+        $match_id = mysqli_real_escape_string($connect, $_POST["football_match_id"]);  
+        $result_id = mysqli_real_escape_string($connect, $_POST["football_result_id"]);
+        $team1_score = mysqli_real_escape_string($connect, $_POST["football_team1_score"]);
+        $team2_score = mysqli_real_escape_string($connect, $_POST["football_team2_score"]);
+        $description = mysqli_real_escape_string($connect, $_POST["football_description"]);
+         
+         $query = "  
+         UPDATE results   
+         SET event_id='$event_id',   
+         match_id='$match_id',
+         team1_score='$team1_score',
+         team2_score='$team2_score',
+         description = '$description'    
+         WHERE result_id='$result_id'";  
+         $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
+
+      }else if($action == "add_volleyball_result")
+      { //-----------------
+        $event_id = mysqli_real_escape_string($connect, $_POST["R_event_id"]);  
+        $match_id = mysqli_real_escape_string($connect, $_POST["R_match_id"]);  
+        $team1_score = mysqli_real_escape_string($connect, $_POST["team1_score"]);
+        $team2_score = mysqli_real_escape_string($connect, $_POST["team2_score"]);  
+        $set1 = mysqli_real_escape_string($connect, $_POST["set1"]);
+        $set2 = mysqli_real_escape_string($connect, $_POST["set2"]);
+        $set3 = mysqli_real_escape_string($connect, $_POST["set3"]);
+        $set4 = mysqli_real_escape_string($connect, $_POST["set4"]);
+        $set5 = mysqli_real_escape_string($connect, $_POST["set5"]);
+        $description = mysqli_real_escape_string($connect, $_POST["description"]);
+         
+         $query = " 
+         INSERT INTO results (event_id, match_id, team1_score, team2_score,set1, set2, set3, set4, set5, description) VALUES ('$event_id', '$match_id', '$team1_score', '$team2_score', '$set1', '$set2', '$set3', '$set4', '$set5', '$description'); ";  
+         $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
+
+      } else if($action == "add_football_result")
+      { 
+      //-----------------here//////////
+        $event_id = mysqli_real_escape_string($connect, $_POST["Rf_event_id"]);  
+        $match_id = mysqli_real_escape_string($connect, $_POST["Rf_match_id"]);  
+        $team1_score = mysqli_real_escape_string($connect, $_POST["football_team1_score"]);
+        $team2_score = mysqli_real_escape_string($connect, $_POST["football_team2_score"]);
+        $description = mysqli_real_escape_string($connect, $_POST["football_description"]);
+         
+         $query = " 
+         INSERT INTO results (event_id, match_id, team1_score, team2_score, description) VALUES ('$event_id', '$match_id', '$team1_score', '$team2_score', '$description'); ";  
+         $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
+
+      }  else if($action == "add_news")
       {
         $time = mysqli_real_escape_string($connect, $_POST["time"]);  
         $place = mysqli_real_escape_string($connect, $_POST["place"]);
@@ -97,6 +219,29 @@
            ";  
            $message = 'Added Record Successfully';  
            mysqli_query($connect, $query);
+
+      } else if($action == "update_news")
+      { //-----------------
+        $event_id = mysqli_real_escape_string($connect, $_POST["event_id"]);  
+        $news_id = mysqli_real_escape_string($connect, $_POST["news_id"]);  
+        $heading = mysqli_real_escape_string($connect, $_POST["heading"]);
+        $date = mysqli_real_escape_string($connect, $_POST["date"]);
+        $time = mysqli_real_escape_string($connect, $_POST["time"]);
+        $place = mysqli_real_escape_string($connect, $_POST["place"]);
+        $pic = mysqli_real_escape_string($connect, $_POST["pic"]);
+        $description = mysqli_real_escape_string($connect, $_POST["description"]);
+         
+         $query = "  
+         UPDATE news_articles   
+         SET event_id='$event_id',
+         heading='$heading',
+         description='$description',
+         date = '$date',
+         place='$place',
+         pic = '$pic'    
+         WHERE news_id='$news_id'";  
+         $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
 
       } else{
 

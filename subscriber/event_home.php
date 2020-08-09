@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     
@@ -87,26 +88,25 @@
           $subuser_id = $row['subuser_id'];
           $subscriber_id = $row['subscriber_id'];
 
-          echo "<div class='' style=''>";
-          echo "<h1  style='margin-top:-5px;color:white;background:black;width:600px;
-          height:100px;'><br> <b style=''>" .$row['event_name']. "</b> </h1>.";
+          echo "<div>";
+          echo "<div class='event-heading'><br> <b style=''>" .$row['event_name']. "</b> </div>.";
       ?>
       <div class='a'>
-      <div style="width: 600px;">
-        <div align="center"><img src="user_images/<?php echo $row['pic']; ?>" class="img-rounded" width="600px" height="250px" style='margin-top: -35px;' />
+      <div class="event-img">
+        <div><img src="user_images/<?php echo $row['pic']; ?>" class="img-rounded event-im" width="100%" />
         </div>
       </div>
       </div>
       <?php
       echo "<br><br>
-      <div style='background:white;margin-top:-68px;width:600px;' align='center'>
+      <div class='event-title' align='center'>
 
-       <h3 style='background:#eee;color:black;'>Place: ".$row['place']. "</h3> <br><br>
-       <h3 style='margin-top:-30px;background:#eee;color:black;'> Date:".$row['t_date']. "</h3><br><br> 
-       <h3 style='margin-top:-30px;background:#eee;color:black;'> Time:" .$row['t_time']." </h3> " ;
+       <div class='event-info' style='padding-top:10px;'>Place: ".$row['place']. "</div>
+       <div class='event-info'> Date:".$row['t_date']. "</div>
+       <div class='event-info'> Time:" .$row['t_time']." </div> " ;
 
-       echo "<input type='button' value='Edit Post' data-toggle='modal' data-target='#add_post' style='width: 150px;height: 45px;float: left;margin-top: 0px;margin-left: 68px;color: white;background:green;'>
-       <input type='button' value='delete Post' id='".$event_id."' class='delete' style='width: 150px;height: 45px;float: left;margin-top: 0px;margin-left: 50px;color: white;background:green;'>";
+       echo "<input type='button' value='Edit Post' data-toggle='modal' data-target='#add_post' class='event-btn'>
+       <input type='button' value='delete Post' id='".$event_id."' class='event-btn-dlt'>";
       echo "</div>";
       echo "</div>";
       echo "</div>
