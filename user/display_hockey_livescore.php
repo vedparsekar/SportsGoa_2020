@@ -11,7 +11,10 @@
     <title></title>
     <style>
         .score-container{
-            background-color: #161616;
+            float:center;
+			background-image: url("../content/world/img/match/match-bg.jpg"),
+			linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    		background-blend-mode: overlay;
             width: 100%;
             height: 100vh;
         }
@@ -40,7 +43,23 @@
             width: 100%;
             margin-top: 1%;
         }
+        .teamname{
+			border-style: none;
+			text-transform: uppercase;
+			font-weight: bold; 
+			text-align: center;
+		}
+        .screen1
+		{
+			height:150px;
+			width: 150px;
+			float:left;
+			text-align: center;
+			font-size:60px;
+			border-radius: 20px;
+			border-style: none;
 
+		}
       
     </style>
 
@@ -58,22 +77,23 @@ setInterval(function(){
 
 <div  id="here" class="score-container">
     <div class="score-head">
-        <h3><b>Hockey</b></h3>Team1 v/s Team2
+        <h3><b>HOCKEY</b></h3>BARCELONA  v/s  REAL MADRID
     </div>
     <div class="display-score">
         <div>
-            <h3>Team 1<h3>
+        <input class="teamname" type="text" name="" value="<?php //echo $team1_name;?>BARCELONA"  readonly></input>
         </div>
         <div>
         <h3>V/S</h3>
         </div>
         <div>
-            <h3>Team 2</h3>
+        <input class="teamname" type="text" name="" value="<?php //echo $team1_name;?>REAL MADRID" readonly></input>
         </div>
     </div>
 
     <div class="score">
-    <h1><b>1 : 3</b></h1>
+    <input  class="screen1" type="text" name="screen1" id="team1" value="<?php //echo $team1;?>1 : 3" readonly></input>
+
         </div>
 </div>
 

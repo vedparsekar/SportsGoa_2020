@@ -43,7 +43,23 @@
             width: 100%;
             margin-top: 1%;
         }
+        .teamname{
+			border-style: none;
+			text-transform: uppercase;
+			font-weight: bold; 
+			text-align: center;
+		}
+        .screen1
+		{
+			height:150px;
+			width: 150px;
+			float:left;
+			text-align: center;
+			font-size:60px;
+			border-radius: 20px;
+			border-style: none;
 
+		}
       
     </style>
 
@@ -65,18 +81,19 @@ setInterval(function(){
     </div>
     <div class="display-score">
         <div>
-            <h3>BARCELONA<h3>
+        <input class="teamname" type="text" name="" value="<?php //echo $team1_name;?>BARCELONA"  readonly></input>
         </div>
         <div>
         <h3>V/S</h3>
         </div>
         <div>
-            <h3>REAL MADRID</h3>
+        <input class="teamname" type="text" name="" value="<?php //echo $team1_name;?>REAL MADRID" readonly></input>
         </div>
     </div>
 
     <div class="score">
-    <h1><b>1 : 3</b></h1>
+    <input  class="screen1" type="text" name="screen1" id="team1" value="<?php //echo $team1;?>1 : 3" readonly></input>
+
         </div>
 </div>
 
