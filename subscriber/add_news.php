@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <style type="text/css">
       label{
         margin-bottom: 20px;
@@ -76,53 +77,73 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-         <form method="post" id="signup-form" enctype="multipart/form-data" class="form-horizontal">
-          <div  class="panel-body" style="background: black;" >
-              <div class="row">
-                <div class="col-lg-5">
+      <div>
+         <form method="post" id="signup-form" enctype="multipart/form-data">
+          <div class="news-form">
+            <div class="news-header">
+              ADD NEWS
+            </div>
+      
                   <input type="text" value="<?php echo $event_id;?>" name="event_id" id="event_id" hidden>
-                  <label>Event Heading</label>
-                  <textarea name="heading" id="heading" required> </textarea> 
+                <div class="news-content">
+                  <div>
+                    <label class="news-label">Event Heading</label>
+                  </div>
+                  <div>
+                    <textarea name="heading" id="heading" required class="form-control"> </textarea>
+                  </div>
                 </div>
-              </div>
-              <label><center>Description</center></label> 
-              <div class="row">
-                <div  class="col-lg-5" >
+              
+              <div class="news-content">
+                <div>
+                  <label class="news-label">Description</label>
+                </div>
+                <div>
                   <textarea class="form-control" name="description" id="description" ></textarea>
                 </div>
               </div>
-              <label><center>date</center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
+            
+              <div class="news-content">
+                <div>
+                 <label class="news-label">date</label> 
+                 </div>
+                 <div>
                   <input type="Date" name="date" id="date" class="form-control" />
                 </div>
               </div>
-              <label><center> Time </center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
+
+              <div class="news-content">
+                <div>
+                  <label class="news-label">Time</label>
+                </div>
+                <div>
                   <input type="time" id="time" class="form-control" name="time">
                 </div>
               </div>
-              <label><center>Place</center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
+              
+              <div class="news-content">
+                <div>
+                  <label class="news-label">Place</label>
+                </div>
+                <div>
                   <textarea class="form-control" name="place" id="place"></textarea>
                 </div>
               </div>
-              <label><center>Picture</center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
-                  <input type="file" style="opacity: 1;" name="pic" id="pic">
+
+              <div class="news-content">
+                <div>
+                  <label class="news-label">Picture</label>
+                </div>
+                <div>
+                  <input type="file" style="opacity: 1;" name="pic" id="pic" class="form-control">
                 </div>
                 <input type="text" value="add_news" name="info" id="info" hidden>
               </div>
-              <div class="row">
-                <div class="col-lg-3 col-lg-offset-2">
-                  <br>
-                  <button type="submit" id="submit" style="width: 150px;height: 30px;background-color: green;color: black;" name="Submit" class="btn btn-default"> </button>
+
+                <div class="n-btn">
+                  <button type="submit" id="submit" name="Submit" class="news-btn btn"> Submit</button>
                 </div>
-              </div>
+
             </div>
           </form> 
         </div>      

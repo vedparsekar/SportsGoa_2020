@@ -121,9 +121,9 @@
 
     <div class="modal fade" id="add_post">
         <div class="modal-dialog">
-          <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;">
-          <div class="container" style="background: url('../content/multi_step/images/nike.png');background-size: 600px 480px;height:600px;text-align: center;display: inline-block;width: 800px;margin-top: -45px; ">
-            <h2 style="margin-top: -16px;margin-bottom: 16px;">Add New Post</h2>
+          <div class="modal-content abc">
+          <div class="container" style="background-color: #141414;background-size: 600px 480px;text-align: center;display: inline-block;width: 800px;margin-top: -45px; ">
+            <h3 class="edit-header">Edit Post</h3>
             <form method="POST" id="signup-form" class="signup-form">
                 <h3>
                   <span class="title_text">Basic Infomation</span>
@@ -224,8 +224,8 @@
                     <span>Step 2 of 2</span>
                 </div>
             </fieldset>
-            <div style="align-content: center;margin-top: -15px;">
-              <button type="submit" style="" class="reg-btn" value="Update Post" name="update_post" id="update_post">Submit</button>
+            <div>
+              <button type="submit" class="reg-btn ev-btn" value="Update Post" name="update_post" id="update_post">Submit</button>
             </div>
             </form>
         </div>
@@ -233,47 +233,47 @@
     </div>
   </div>
   <!------- Subuser Registration Form(Pop up)-------->
-  <div class="modal fade" id="addSubuser">
+  <div class="modal fade" id="addSubuser" style="background-color: #0a0a0aaf">
     <div class="modal-dialog">
-      <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;">
-        <div style="margin-left: 30px;">
-          <h2 style="margin-bottom: 0px;">Subuser Registration</h2>
+      <div class="modal-content addsub" style="background-color: #141414;width:100%;padding:5%;">
+        <div>
+          <h3 class="edit-header" style="text-align: center;">Subuser Registration</h3>
           <br>
         <form method="post" class="form121" id="insert_form">
           
           <div class="form-group">
-          <b>Name</b>  <input type="text" placeholder="Name" id="subuser_name2" name="subuser_name2">
+          <label class="form-label">Name</label><input type="text" placeholder="Name" id="subuser_name2" name="subuser_name2">
           </div>
           
           <div class="form-group">
-          <b>Gender</b>  <select name="gender" id="gender" name="gender">  
+          <label class="form-label">Gender</label><select name="gender" id="gender" name="gender">  
              <option value="male">Male</option>  
              <option value="female">Female</option>  
             </select>
           </div>
           
           <div class="form-group">
-          <b>User ID</b>  <input type="text" placeholder="ex. name@123" id="subuser_id2" name="subuser_id2">
+          <label class="form-label">User ID</label>  <input type="text" placeholder="ex. name@123" id="subuser_id2" name="subuser_id2">
           </div>
           
           <div class="form-group">
-          <b>Dob</b>  <input type="date" placeholder="" id="dob" name="dob">
+          <label class="form-label">DOB</label>  <input type="date" placeholder="" id="dob" name="dob">
           </div>
           
           <div class="form-group">
-          <b>Email</b>  <input type="email" placeholder="Email" id="email" name="email">
+          <label class="form-label">Email</label> <input type="email" placeholder="Email" id="email" name="email">
           </div>
           
           <div class="form-group">
-          <b>Phone</b>  <input type="text" placeholder="Phone" id="mobile" name="mobile">
+          <label class="form-label">Phone</label>  <input type="text" placeholder="Phone" id="mobile" name="mobile">
           </div>
           
           <div class="form-group">
-          <b>Password</b>  <input type="password" placeholder="Password" id="password" name="password" required>
+          <label class="form-label">Password</label>  <input type="password" placeholder="Password" id="password" name="password" required>
           </div>
           
           <div class="form-group">
-          <b>Confirm Password</b>  <input type="password" placeholder="Confirm Password" name="cpassword" required>
+          <label class="form-label">Confirm Password:</label>  <input type="password" placeholder="Confirm Password" name="cpassword" required>
           </div>
           <br />
           <input type="text" value="add_subuser" name="info" id="info" hidden>
