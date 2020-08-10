@@ -70,74 +70,78 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-          <div  class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12 col-lg-offset-0" style="background: black;margin-top: -43px;">
-                <br><br>
-                <div class="panel panel-success">
-                <div style="color: white; background:black;" class="panel-heading">
-                <center>Add Fixture</center></div>
-                <div style="color: black; " class="panel-body  panel-danger">
-                  <div id="design">
-                    <form action="add.php" method="post" name="syForm">
-                      <input type="hidden" value="<?php //echo$display_id;?>" name="event_id" />
-                      <div class="row">
-                        <div class="col-lg-3" style="margin-left: 30px;">
-                          TEAM 1 
-                          <input type="text" placeholder="Goa" name="team1" required class="form-control" /> 
-                        </div>
-                        <div class="row" style="margin-top: 20px;">
-                          <div class="col-lg-3 col-lg-offset-1">
-                            V/S 
-                          </div>
-                          <div class="col-lg-9 " style="margin-left: 130px;margin-top: -45px;">
-                              TEAM 2 
-                            <input type="text" placeholder="Kerala" name="team2" required class="form-control" /> 
-                          </div>
-                        </div>
+      <div class="fixtr-content">
+        <div class="fixtr-heading">
+            Add Fixture
+        </div>
+
+        <div class="">
+          <div id="design">
+            <form action="add.php" method="post" name="syForm">
+              <input type="hidden" value="<?php //echo$display_id;?>" name="event_id" />
+
+                 <div class="fixtr-team">
+                      <div class="">
+                        <p class="fixtr-text">TEAM 1</p> 
+                        <input type="text" placeholder="Goa" name="team1" required class="form-control" /> 
                       </div>
+
+                      <div class="">
+                      <p class="fixtr-text">V/S</p>
+                      </div>
+
+                      <div class=" ">
+                      <p class="fixtr-text">TEAM 2</p>
+                        <input type="text" placeholder="Kerala" name="team2" required class="form-control" /> 
+                      </div>
+                  </div>
+                      
                       <br/><br/>
-                    <div class="row">
-                      <div class="col-lg-1 col-lg-offset-3">
-                        VENUE:
-                      </div>
-                      <div class="col-lg-3">
-                        <input type="text" placeholder="Venue" name="place" required class="form-control" /> 
-                      </div>
+                  <div class="fixtr-venue">
+                  <div class="row">
+                    <div class="col-lg-1 col-lg-offset-3">
+                    <p class="fixtr-text">VENUE:</p>
                     </div>
-                    <br/><br/>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Venue" name="place" required class="form-control" /> 
+                    </div>
+                    </div>
+                  
                     <div class="row">
                       <div class="col-lg-1 col-lg-offset-3">
-                        DATE
+                      <p class="fixtr-text">DATE</p>
                       </div>
                       <div class="col-lg-3">
                         <input type="date" placeholder="yyyy-mm-dd" name="t_date" required class="form-control" />
                       </div> 
                     </div>
-                    <br/><br/>
+
                     <div class="row">
                       <div class="col-lg-1 col-lg-offset-3">
-                        TIME
+                      <p class="fixtr-text">TIME</p>
                       </div>
                       <div class="col-lg-3 ">
                         <input type="time" placeholder="eg 10:30 am" name="t_time" required class="form-control" />
                       </div>
                     </div>
+                  </div>
+
                     <br>
-                    <div class="row">
-                      <div class="col-lg-1 col-lg-offset-5">
-                        <input type="submit" name="btSubmit" id="button1" value="Save" >
+                    <div class="save-btn-ft">
+                      <div class="col-lg-3">
+                        <input type="submit" class="f-btn" name="btSubmit" id="button1" value="Save" >
                       </div>
                     </div>
-                  </form>
-                  </div>                  
+                    </form>
+</div>
+
+                  
+                </div>                  
                 </div>
-              </div>
-            </div>            
-          </div>
-        </div>
-      </div>
+
+
+
+
 		</div>
 
     <script src="../content/sidebar/js/jquery.min.js"></script>

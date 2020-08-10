@@ -599,3 +599,72 @@
   color: #111111;
 }
 
+
+/*-----fixture--------*/
+
+.fixtr-content{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 4%;
+  margin-left: 10%;
+  width: 65%;
+  justify-self: center;
+}
+.fixtr-heading{
+  background-color: #b92d2d;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.fixtr-team{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.fixtr-venue{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.fixtr-text{
+  font-size: 13px;
+}
+.save-btn-ft{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.f-btn{
+  background-color: #2c47f3;
+  color:white;
+}
+
+
+/*-----view fixture-------*/
+
+.vfixtr-heading{
+  background-color: #b92d2d;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.vfix-btn{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 2%;
+}
+
+.f-btn{
+  background-color: #134fb6;
+  color:white;
+}
+
+.fix-table{
+  font-size: 13px;
+}

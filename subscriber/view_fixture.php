@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
+
     <style type="text/css">
       .a{
         text-align:center;
@@ -84,17 +86,19 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-          <div style="float: left;align-content: center;"> 
-            <button type="button" name="add" id="add" data-toggle="modal" data-target="#Add_fixture" class="btn btn-warning">Add New Fixture</button>
+      <div id="content" class="">
+          
+          <div class="vfixtr-heading">
+            Fixture
           </div>
+          <div>
         <?php 
 
         $query = "SELECT * FROM `fixtures` WHERE `match_id` NOT IN (select `match_id` from `results`) AND`event_id`='$event_id'";
 
           $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
           if (mysql_num_rows($result) > 0) { 
-              echo "<table width='80%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
+              echo "<table width='100%' border='1' class='fix-table'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
               echo"<td class='a'>MATCH ID</td>";
@@ -159,7 +163,10 @@
           mysql_close($connection);
 
           ?>
-
+          <div class="vfix-btn"> 
+            <button type="button" name="add" id="add" data-toggle="modal" data-target="#Add_fixture" class="f-btn btn">Add New Fixture</button>
+          </div>
+          </div>
    <div class="modal fade" id="Add_fixture">
     <div class="modal-dialog">
       <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;">
