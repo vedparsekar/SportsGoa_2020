@@ -194,19 +194,19 @@
           $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
           if (mysql_num_rows($result) > 0) 
           { 
-              echo "<table width='450%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
+              echo "<table width='100%' border='' class='fix-table'>"; 
               echo"<tr>";
-              echo"<td class='a'>Team1</td>";
-              echo"<td class='a'>Team2</td>";
-              echo"<td class='a b'>Set1</td>";
-              echo"<td class='a b'>Set2</td>";
-              echo"<td class='a b'>Set3</td>";
-              echo"<td class='a b'>Set4</td>";
-              echo"<td class='a b'>Set5</td>";
-              echo"<td class='a'>Team1 Score</td>";
-              echo"<td class='a'>Team2 Score</td>";
-              echo"<td class='a'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
+              echo"<td class='a fix-th'>Team1</td>";
+              echo"<td class='a fix-th'>Team2</td>";
+              echo"<td class='a b fix-th'>Set1</td>";
+              echo"<td class='a b fix-th'>Set2</td>";
+              echo"<td class='a b fix-th'>Set3</td>";
+              echo"<td class='a b fix-th'>Set4</td>";
+              echo"<td class='a b fix-th'>Set5</td>";
+              echo"<td class='a fix-th'>Team1 Score</td>";
+              echo"<td class='a fix-th'>Team2 Score</td>";
+              echo"<td class='a fix-th'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -240,15 +240,15 @@
             $query = "Select fixtures.match_id,fixtures.t_date, fixtures.team1,fixtures.team2, results.team1_score,results.team2_score,results.description,results.result_id  from fixtures,results where results.match_id=fixtures.match_id and results.event_id=$event_id"; 
             $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
             if (mysql_num_rows($result) > 0) { 
-              echo "<table width='400%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
+              echo "<table width='100%' border='' class='fix-table'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a'>Team1</td>";
-              echo"<td class='a'>Team2</td>";
-              echo"<td class='a'>Team1 Score</td>";
-              echo"<td class='a'>Team2 Score</td>";
-              echo"<td class='a'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
+              echo"<td class='a fix-th'>Team1</td>";
+              echo"<td class='a fix-th'>Team2</td>";
+              echo"<td class='a fix-th'>Team1 Score</td>";
+              echo"<td class='a fix-th'>Team2 Score</td>";
+              echo"<td class='a fix-th'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -275,15 +275,15 @@
             $query = "Select fixtures.match_id,fixtures.t_date, fixtures.team1,fixtures.team2, results.team1_score,results.team2_score,results.description,results.result_id  from fixtures,results where results.match_id=fixtures.match_id and results.event_id=$event_id"; 
             $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
             if (mysql_num_rows($result) > 0) { 
-              echo "<table width='400%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
+              echo "<table width='100%' border='' class='fix-table'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a'>Team1</td>";
-              echo"<td class='a'>Team2</td>";
-              echo"<td class='a'>Team1 Score</td>";
-              echo"<td class='a'>Team1 Score</td>";
-              echo"<td class='a'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
+              echo"<td class='a fix-th'>Team1</td>";
+              echo"<td class='a fix-th'>Team2</td>";
+              echo"<td class='a fix-th'>Team1 Score</td>";
+              echo"<td class='a fix-th'>Team1 Score</td>";
+              echo"<td class='a fix-th'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -311,15 +311,15 @@
             $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
             if (mysql_num_rows($result) > 0) 
             { 
-              echo "<table width='400%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
+              echo "<table width='100%' border='' class='fix-table'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a'>Team1</td>";
-              echo"<td class='a'>Team2</td>";
-              echo"<td class='a'>Team1 Score</td>";
-              echo"<td class='a'>Team1 Score</td>";
-              echo"<td class='a'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
+              echo"<td class='a fix-th'>Team1</td>";
+              echo"<td class='a fix-th'>Team2</td>";
+              echo"<td class='a fix-th'>Team1 Score</td>";
+              echo"<td class='a fix-th'>Team1 Score</td>";
+              echo"<td class='a fix-th'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
