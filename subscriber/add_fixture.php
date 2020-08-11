@@ -100,7 +100,7 @@
                   <div class="fixtr-venue">
                   <div class="row">
                     <div class="col-lg-1 col-lg-offset-3">
-                    <p class="fixtr-text">VENUE:</p>
+                    <p class="fixtr-text">VENUE</p>
                     </div>
                     <div class="col-lg-3">
                       <input type="text" placeholder="Venue" name="place" required class="form-control" /> 

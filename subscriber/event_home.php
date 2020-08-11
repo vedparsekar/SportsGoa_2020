@@ -133,11 +133,11 @@
                     <input type="text" value="<?php echo $subscriber_id; ?>" name="subscriber_id" id="subscriber_id" hidden>
                     <div class="form-group">
                         <input type="text" value="<?php echo $event_id; ?>" name="event_id" id="event_id" hidden>
-                        <label for="event_name" class="form-label">Event Name </label>
+                        <label for="event_name" class="form-label fm-lb">Event Name </label>
                         <input type="text" value="<?php echo $event_name; ?>" name="event_name" id="event_name" placeholder="Event Name" />
                     </div>
                     <div class="form-group">
-                        <label for="event_type" class="form-label">Tournament</label>
+                        <label for="event_type" class="form-label fm-lb">Tournament</label>
                         <select name="event_type" id="event_type" >
                           <option value=""> Select </option>        
                     <option value="local" <?php if($event_type== "local") echo "selected"; ?> >Local Tournament</option> 
@@ -145,7 +145,7 @@
                   </select>
                     </div>
                     <div class="form-group">
-                        <label for="event_category" class="form-label">Game Type</label>
+                        <label for="event_category" class="form-label fm-lb">Game Type</label>
                     <select name="event_category" id="event_category" required>
                             <option value="">select</option>
                       <option value="cricket" <?php if($event_category== "cricket") echo "selected"; ?> >Cricket</option>
@@ -155,12 +155,12 @@
                   </select>
                     </div>
                     <div class="form-group">
-                        <label for="place" class="form-label">Location</label>
+                        <label for="place" class="form-label fm-lb">Location</label>
                         <input type="text" value="<?php echo $place; ?>" name="place" id="place" placeholder="Tournament Venue" />
                     </div>
 
                     <div class="form-group">
-                        <label for="Date" class="form-label">Tournament Date</label>
+                        <label for="Date" class="form-label fm-lb">Tournament Date</label>
                         <input type="Date" value="<?php echo $t_date; ?>" name="t_date" id="t_date" placeholder="Tournament Date" />
                     </div>
                 </div>
@@ -176,15 +176,15 @@
 
                 <div class="fieldset-content1"  style="padding-top: 30px;">
                     <div class="form-textarea">
-                        <label for="description" class="form-label">Description</label>
+                        <label for="description" class="form-label fm-lb">Description</label>
                         <textarea name="description" id="description" placeholder="Description"><?php echo $description; ?></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="Time" class="form-label">Tournament Time</label>
+                        <label for="Time" class="form-label fm-lb">Tournament Time</label>
                         <input type="Time" value="<?php echo $t_time; ?>" name="t_time" id="t_time" placeholder="Tournament Time" />
                     </div>
                     <div class="form-group">
-                        <label for="your_avatar" class="form-label">Upload Banner Picture</label>
+                        <label for="your_avatar" class="form-label fm-lb">Upload Banner Picture</label>
                         <div class="form-file">
                             <input type="file" value="<?php echo $pic; ?>" name="pic" id="pic" class="custom-file-input" />
                             <span id='val'></span>
@@ -192,11 +192,11 @@
                         </div>
                     </div>
                     <div class="form-textarea">
-                        <label for="rules" class="form-label">Rules</label>
+                        <label for="rules" class="form-label fm-lb">Rules</label>
                         <textarea name="rules" id="rules" placeholder="Rules"><?php // echo $rules; ?></textarea>
                     </div>
                     <div class="form-select">
-                        <label for="subuser_id" class="form-label"> Select Subuser_id</label>
+                        <label for="subuser_id" class="form-label fm-lb"> Select Subuser_id</label>
                         <div class="form-select-item">
                           <?php
                             echo"<select name='subuser_id' id='subuser_id' class='form-control' required> ";
@@ -235,45 +235,45 @@
   <!------- Subuser Registration Form(Pop up)-------->
   <div class="modal fade" id="addSubuser" style="background-color: #0a0a0aaf">
     <div class="modal-dialog">
-      <div class="modal-content addsub" style="background-color: #141414;width:100%;padding:5%;">
+      <div class="modal-content addsub" style="background-color: #141414;width:100%;">
         <div>
           <h3 class="edit-header" style="text-align: center;">Subuser Registration</h3>
           <br>
-        <form method="post" class="form121" id="insert_form">
+        <form method="post" class="form121" style="padding:5%;" id="insert_form">
           
           <div class="form-group">
-          <label class="form-label">Name</label><input type="text" placeholder="Name" id="subuser_name2" name="subuser_name2">
+          <label class="form-label fm-lb">Name</label><input type="text" placeholder="Name" id="subuser_name2" name="subuser_name2">
           </div>
           
           <div class="form-group">
-          <label class="form-label">Gender</label><select name="gender" id="gender" name="gender">  
+          <label class="form-label fm-lb">Gender</label><select name="gender" id="gender" name="gender">  
              <option value="male">Male</option>  
              <option value="female">Female</option>  
             </select>
           </div>
           
           <div class="form-group">
-          <label class="form-label">User ID</label>  <input type="text" placeholder="ex. name@123" id="subuser_id2" name="subuser_id2">
+          <label class="form-label fm-lb">User ID</label>  <input type="text" placeholder="ex. name@123" id="subuser_id2" name="subuser_id2">
           </div>
           
           <div class="form-group">
-          <label class="form-label">DOB</label>  <input type="date" placeholder="" id="dob" name="dob">
+          <label class="form-label fm-lb">DOB</label>  <input type="date" placeholder="" id="dob" name="dob">
           </div>
           
           <div class="form-group">
-          <label class="form-label">Email</label> <input type="email" placeholder="Email" id="email" name="email">
+          <label class="form-label fm-lb">Email</label> <input type="email" placeholder="Email" id="email" name="email">
           </div>
           
           <div class="form-group">
-          <label class="form-label">Phone</label>  <input type="text" placeholder="Phone" id="mobile" name="mobile">
+          <label class="form-label fm-lb">Phone</label>  <input type="text" placeholder="Phone" id="mobile" name="mobile">
           </div>
           
           <div class="form-group">
-          <label class="form-label">Password</label>  <input type="password" placeholder="Password" id="password" name="password" required>
+          <label class="form-label fm-lb">Password</label>  <input type="password" placeholder="Password" id="password" name="password" required>
           </div>
           
           <div class="form-group">
-          <label class="form-label">Confirm Password:</label>  <input type="password" placeholder="Confirm Password" name="cpassword" required>
+          <label class="form-label fm-lb">Confirm Password:</label>  <input type="password" placeholder="Confirm Password" name="cpassword" required>
           </div>
           <br />
           <input type="text" value="add_subuser" name="info" id="info" hidden>

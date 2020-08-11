@@ -89,7 +89,7 @@
       <div id="content" class="">
           
           <div class="vfixtr-heading">
-            Fixture
+            FIXTURE
           </div>
           <div>
         <?php 
@@ -98,16 +98,16 @@
 
           $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
           if (mysql_num_rows($result) > 0) { 
-              echo "<table width='100%' border='1' class='fix-table'>"; 
+              echo "<table width='100%' border='' class='fix-table'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a'>MATCH ID</td>";
-              echo"<td class='a'>TEAM1</td>";
-              echo"<td class='a'>TEAM2</td>";
-              echo"<td class='a'>VENUE</td>";
-              echo"<td class='a'>DATE</td>";
-              echo"<td class='a'>TIME</td>";
-              echo"<td colspan=4 align='center'>ACTION</td>";
+              echo"<td class='a fix-th'>MATCH ID</td>";
+              echo"<td class='a fix-th'>TEAM1</td>";
+              echo"<td class='a fix-th'>TEAM2</td>";
+              echo"<td class='a fix-th'>VENUE</td>";
+              echo"<td class='a fix-th'>DATE</td>";
+              echo"<td class='a fix-th'>TIME</td>";
+              echo"<td colspan=4 align='center' class='a fix-th'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
