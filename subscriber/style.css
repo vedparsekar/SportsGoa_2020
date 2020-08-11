@@ -683,11 +683,11 @@
 }
 
 .fix-th{
-  font-weight: bolder;
   padding: 1%;
   background-color: #b92d2d;
   color: white;
   border-style: none;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 800px) {

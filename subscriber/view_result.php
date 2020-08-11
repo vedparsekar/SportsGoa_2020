@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
+
     <style type="text/css">
       .tab_res{
         width: 1000px;
@@ -22,8 +24,7 @@
     <style type="text/css">
       .a{
         text-align:center;
-        padding-left: 1px;
-        padding-right: 1px;
+
       }
       .b{
         padding-left: 5px;
@@ -88,11 +89,12 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5" class="tab_res" style="width: 1000px;">
-        <div  class="container-fluid">
-          <div class="row">
-          <div class="col-lg-3 col-lg-offset-0" >
+      <div id="content">
 
+      <div class="vfixtr-heading">
+            RESULT
+          </div>
+          
           <?php 
         //   //*********************proper table *******************//
         // $query = "SELECT * FROM `fixtures` WHERE `match_id` NOT IN (select `match_id` from `results`) AND`event_id`='$event_id'";
@@ -150,23 +152,25 @@
              //echo"<td>EVENT ID</td>";
               //echo"<td>MATCH ID</td>";
               //echo"<td>DATE</td>";
-              echo"<td>TEAM 1</td>";
-              echo"<td>TEAM 2</td>";
-              echo"<td>TEAM1 SCORE</td>";
-              echo"<td>TEAM2 SCORE</td>";
-              echo"<td>FINAL RESULT</td>";
-              echo"<td colspan=2>ACTION</td>";
+              echo "<table width='100%' border='1' class='fix-table'>"; 
+              echo"<tr>";
+              echo"<td class='a fix-th'>TEAM 1</td>";
+              echo"<td class='a fix-th'>TEAM 2</td>";
+              echo"<td class='a fix-th'>TEAM1 SCORE</td>";
+              echo"<td class='a fix-th'>TEAM2 SCORE</td>";
+              echo"<td class='a fix-th'>FINAL RESULT</td>";
+              echo"<td colspan=2 class='a fix-th'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
                  // echo "<td>".$row['event_id']."</td>"; 
                   //echo "<td>".$row['match_id']."</td>";
                   //echo "<td>".$row['t_date']."</td>";  
-                  echo "<td>".$row['team1']."</td>";
-                  echo "<td>".$row['team2']."</td>";
-                  echo "<td>".$row['team1_score']."</td>";
-                  echo "<td>".$row['team2_score']."</td>";
-                  echo "<td>".$row['description']."</td>"; 
+                  echo "<td class='a'>".$row['team1']."</td>";
+                  echo "<td class='a'>".$row['team2']."</td>";
+                  echo "<td class='a'>".$row['team1_score']."</td>";
+                  echo "<td class='a'>".$row['team2_score']."</td>";
+                  echo "<td class='a'>".$row['description']."</td>"; 
                    
                   
                   //shows the Delete and edit link for each row
@@ -175,7 +179,7 @@
                  // echo "<td><a href=football_result_edit.php?id=".$row['result_id'].">    Update</a></td>"; 
                   echo "</tr>"; 
               } 
-              echo"</tbody>
+              echo"
                 </table>
                 </div>"; 
           }
@@ -344,11 +348,7 @@
     }
 
           ?>
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>  
+      </div>  
 <!-------------------- Bootstrap modals for Adding Results -------------------------------------->       
 
 
