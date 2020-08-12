@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <style type="text/css">
       .a{
         text-align:center;
@@ -83,19 +84,22 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
+      <div id="content">
+      <div class="vfixtr-heading">
+            NEWS
+          </div>
         <?php
 
           $query="select news_id,heading,description,date,time,place,pic from news_articles where event_id=$event_id";
-          echo "<table width='83%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
+          echo "<table width='100%' border='' class='fix-table'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a'>Pic</td>";
-              echo"<td class='a'>Heading</td>";
-              echo"<td class='a'>Date</td>";
-              echo"<td class='a'>Time</td>";
-              echo"<td class='a'>Place</td>";
-              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
+              echo"<td class='a fix-th'>Pic</td>";
+              echo"<td class='a fix-th'>Heading</td>";
+              echo"<td class='a fix-th'>Date</td>";
+              echo"<td class='a fix-th'>Time</td>";
+              echo"<td class='a fix-th'>Place</td>";
+              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
               echo"</tr>";
           
               $res=mysql_query($query);
@@ -187,37 +191,39 @@
             <div class='row'>
               <div class='col-sm-offset-0 col-sm-12'>
                 <div class='panel panel-success'>
-                  <div style='color: white; background:black;text-transform:uppercase;' class='panel-heading'>
-                    <center><div id='view_heading' style="height:40px;font-size:22px;"> </div></center>
+                  <div style='color: white;background-color: #b92d2d;;text-transform:uppercase;' class='panel-heading'>
+                    <div id='view_heading' style="height:40px;font-size:20px;background-color: #b92d2d; text-align: center;"> </div>
                   </div>
                   <div style='color: black; background:white;' class='panel-body'>
                   <div class='row'>
+                    
                      <div class='col-lg-10 col-lg-offset-1'>
                         <br>
                         <div class='row'>
                           <div class='col-lg-3 col-lg-offset-0' style='background:white;'>
-                            <textarea id='view_date' class='form-control' style='width:100px;height:30px;' disabled> </textarea>  
+                            <textarea id='view_date' class='form-control' style='width:100px;height:30px;margin:3%;' disabled> </textarea>  
                           </div>
                           <div class='row'>
                             <div class='col-lg-3 col-lg-offset-1' style='background:white;'>
-                              <textarea id='view_time' class='form-control' style='width:100px;height:30px;margin-left:-10px' disabled> </textarea>            
+                              <textarea id='view_time' class='form-control' style='width:100px;height:30px;margin:3%;' disabled> </textarea>            
                             </div>
                           </div>
                           <br/>
                           <div class='row'>
-                            <div class='col-lg-3 col-lg-offset-8' style='margin-top:-50px;'>
-                              <textarea id='view_place' class='form-control' style='width:100px;height:30px;margin-top:50px;margin-left:30px;' disabled></textarea>            
+                            <div class='col-lg-3 col-lg-offset-8'>
+                              <textarea id='view_place' class='form-control' style='width:100px;height:30px;margin:3%;' disabled></textarea>            
                             </div>
                           </div>
                         </div>
                         <div class='row'>
                           <div class='col-lg-10 col-lg-offset-1' >
-                            <br><br><center><div style="font-size:20px;min-height:100px; ;max-height: 400px;width:500px;margin-left:-50px;overflow-y: scroll;" id='view_description'></center>
+                            <br><br><center><div style="font-size:15px;min-height:100px; ;max-height: 400px;width:500px;margin-left:-50px;overflow-y: scroll;" id='view_description'></center>
                               <br>
                             <br>
                           </div>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </div>

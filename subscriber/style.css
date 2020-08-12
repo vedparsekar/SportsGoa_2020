@@ -502,6 +502,17 @@
 }
 
 
+@media screen and (max-width: 800px) {
+  .event-btn-dlt{
+    margin: 5%;  
+  }
+
+  .event-btn{
+    margin: 5%;
+  }
+}
+
+
 @media screen and (max-width: 650px) {
   .event-heading {
     width: 90%;
@@ -712,7 +723,7 @@
 }
 
 .ev-btn{
-  background-color: #f13838;
+  background-color: #b92d2d;
   color: #e8e8e8;
   float:left;
   width: 100px;
@@ -747,7 +758,7 @@
 }
 
 .news-header{
-  background-color: #f13838;
+  background-color: #b92d2d;
   padding: 3%;
   color: white;
   text-align: center;
