@@ -458,9 +458,9 @@
                   <label>TEAM 2</label> 
                   <input type="text" placeholder="2" value="" name="football_team2_score" id="football_team2_score" required class="form-control" /> 
                 </div>
-              
-
+          
                 <br>
+                
               <div class="form-group">  
               <label> DESCRIPTION / FINAL STATUS </label> 
                   <input type="text" placeholder="India won by 3-2 sets" name="football_description" id="football_description" required />
