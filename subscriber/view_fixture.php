@@ -169,7 +169,7 @@
           </div>
    <div class="modal fade" id="Add_fixture">
     <div class="modal-dialog">
-      <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;">
+      <div class="modal-content abc" style="background-color:white;text-align: center;display: inline-block;margin-top: 160px; padding:3%">
         <div style="margin-left: 30px;">
           <h2 style="margin-bottom: 0px;"> Add Fixture </h2>
           <br>
@@ -177,23 +177,23 @@
           <input type="text" value="<?php echo $event_id; ?>" id="event_id" name="event_id" hidden>
           <input type="text" value="" id="match_id" name="match_id" hidden>
           <div class="form-group">
-          <b>Team1</b> <input type="text" placeholder="Team1" id="team1" name="team1" required>
+          <label> Team1</label> <input type="text" placeholder="Team1" id="team1" name="team1" class="form-control" required>
           </div>
 
           <div class="form-group">
-          <b>Team2</b> <input type="text" placeholder="Team2" id="team2" name="team2" required>
+          <label>Team2</label> <input type="text" placeholder="Team2" id="team2" name="team2" class="form-control" required>
           </div>          
                     
           <div class="form-group">
-          <b>Location</b>  <input type="text" placeholder="Venue" name="place" id="place" required >
+          <label>Location</label>  <input type="text" placeholder="Venue" name="place" id="place" class="form-control" required >
           </div>
           
           <div class="form-group">
-          <b>Date</b>  <input type="date" placeholder="" id="t_date" name="t_date" required>
+          <label>Date</label>  <input type="date" placeholder="" id="t_date" name="t_date" class="form-control" required>
           </div>
           
           <div class="form-group">
-          <b>Time</b>  <input type="TIME" placeholder="Time" id="t_time" name="t_time" required>
+          <label>Time</label>  <input type="TIME" placeholder="Time" id="t_time" name="t_time" class="form-control" required>
           </div>
           
           <br />

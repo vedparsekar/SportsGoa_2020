@@ -130,51 +130,46 @@
       <div class="modal-dialog">
         <div class="modal-content abc">
           <form method="post" id="Add_News_Form">
-            <div  class="panel-body" style="background: black;margin-top: 147px;" >
+            <div  class="panel-body" style="background-color: white;margin-top: 147px;" >
               <input type="hidden" value="" name="event_id" id="event_id" />
               <input type="hidden" value="" id="news_id" name="news_id" />
-              <div class="row">
-                <div class="col-lg-5">
-                  <label>Event Heading</label><input type="text" name="heading" id="heading" required>
-                </div>
+
+              <div class="form-group">
+                  <label>Event Heading</label>
+                  <input type="text" name="heading" id="heading" class="form-control"required>
               </div>
-              <label><center>Description</center></label> 
-              <div class="row">
-                <div  class="col-lg-5" >
-                  <textarea name="description" id="description" required ></textarea>
-                </div>
+
+              <div class="form-group">
+                <label>Description</label> 
+                <textarea name="description" id="description" class="form-control" required ></textarea>
               </div>
-              <label><center>date</center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
-                  <input type="Date" name="date" id="date" required />
-                </div>
+
+              <div class="form-group">
+                  <label>date</label>   
+                  <input type="Date" name="date" id="date" class="form-control" required />
               </div>
-              <label><center>   time </center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
-                  <input type="time" name="time" id="time" required>
-                </div>
+
+              <div class="form-group">
+              <label>time</label> 
+                  <input type="time" name="time" id="time" class="form-control" required>
               </div>
-              <label><center>place</center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
-                  <textarea name="place" id="place" required></textarea>
-                </div>
+
+              <div class="form-group">
+                <label>place</label> 
+                  <textarea name="place" id="place" class="form-control" required></textarea>
               </div>
-              <label><center>picture</center></label> 
-              <div class="row">
-                <div  class="col-lg-5">
-                  <input type="file" name="news_pic" id="news_pic" >
-                </div>
+
+
+              <div class="form-group">
+              <label>picture</label> 
+                  <input type="file" name="news_pic" class="form-control" id="news_pic" >
               </div>
-              <div class="row">
-                <div class="col-lg-3 col-lg-offset-2">
-                  <br>
+
+              <div class="form-group">
                   <input type="text" value="update_news" name="info" id="info" hidden>
-                  <button type="submit" name="btnsave" value="Submit" id="submit" class="btn btn-default"> </button>
+                  <button type="submit" name="btnsave" value="Submit" id="submit" class="btn btn-default form-control">Save </button>
                 </div>
-              </div>
+
             </div>
           </form>
         </div>

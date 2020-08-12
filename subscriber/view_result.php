@@ -355,81 +355,72 @@
 <!------------ Adding Volleyball Results ------------------>
       <div class="modal fade" id="Volleyball_Add">
         <div class="modal-dialog">
-          <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;margin-top: 140px;">
+          <div class="modal-content abc" style="background-color:white;text-align: center;display: inline-block;margin-top: 160px; padding:3%">
             <form method="post" id="Volleyball_Add_Result">
               <input type="text" value="" name="event_id" id="event_id" hidden/>
               <input type="text" value="" name="match_id" id="match_id" hidden />
               <input type="text" value="" name="result_id" id="result_id" hidden />
-              <center>Update Result</center>
-              <div class="row">
-                <div class="col-lg-3">  
+              <div style="background-color: #b92d2d;padding:2%;color:white;">UPDATE RESULT</div>
+              <div class="result-ed-team">
+                <div>  
                  TEAM 1
-                  <input type="text" placeholder="India" id="team1" name="team1" value="" required readonly /> 
+                  <input type="text" placeholder="India" id="team1" name="team1" value="" class="form-control"  required readonly /> 
                 </div>
-                <div class="col-lg-1 col-lg-offset-3">  
+                <div >  
                   V/S 
                 </div>
-                <div class="col-lg-3 col-lg-offset-1">  
+                <div >  
                   TEAM 2 
-                  <input type="text" placeholder="MALASIA" name="team2" id="team2" value="" required readonly / > 
+                  <input type="text" placeholder="MALASIA" name="team2" id="team2" value="" class="form-control" required readonly /> 
                 </div>
+              </div>
+
+              <br>
+              <div class="form-group">
+                <label>SET 1</label>
+                  <input type="text" placeholder="21-20" name="set1" id="set1" class="form-control" required /> 
+              </div>
+
+              <div class="form-group">
+              <label>SET 2</label> 
+                  <input type="text" placeholder="21-19" name="set2" id="set2" class="form-control" required /> 
+              </div>
+
+              <div class="form-group">
+              <label>SET 3</label> 
+                  <input type="text" placeholder="18-21" name="set3" id="set3" class="form-control" required /> 
+              </div>
+
+              <div class="form-group">
+              <label>SET 4</label> 
+                  <input type="text" placeholder="20-21" name="set4" id="set4" class="form-control" /> 
+              </div>
+
+              <div class="form-group">
+              <label>SET 5</label>
+                  <input type="text" placeholder="21-17" name="set5" id="set5" class="form-control" /> 
+              </div>
+
+              <div class="form-group">  
+                  <label>SETS WON</label> 
+                  <input type="text" placeholder="3" name="team1_score" id="team1_score" class="form-control" required /> 
+     
+                  <label>SETS WON</label> 
+                  <input type="text" placeholder="2" name="team2_score" id="team2_score" class="form-control" required />
+            
+              </div>
+
+              <br>
+              <div class="form-group">  
+                   <label> DESCRIPTION / FINAL STATUS </label>  
+                  <input type="text" placeholder="India won by 3-2 sets" name="description" id="description" class="form-control" required />
               </div>
               <br>
-              <div class="row">
-                set1
-                <div class="col-lg-3 col-lg-offset-4">  
-                  <input type="text" placeholder="21-20" name="set1" id="set1" required /> 
-                </div>
-              </div>
-              <div class="row">
-                set2
-                <div class="col-lg-3 col-lg-offset-4">  
-                  <input type="text" placeholder="21-19" name="set2" id="set2" required /> 
-                </div>
-              </div>
-              <div class="row">
-                set3
-                <div class="col-lg-3 col-lg-offset-4">  
-                  <input type="text" placeholder="18-21" name="set3" id="set3" required /> 
-                </div>
-              </div>
-              <div class="row">
-                set4
-                <div class="col-lg-3 col-lg-offset-4">  
-                  <input type="text" placeholder="20-21" name="set4" id="set4" /> 
-                </div>
-              </div>
-              <div class="row">
-                set5
-                <div class="col-lg-3 col-lg-offset-4">  
-                  <input type="text" placeholder="21-17" name="set5" id="set5" /> 
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-3">  
-                  SETS WON 
-                  <input type="text" placeholder="3" name="team1_score" id="team1_score" required /> 
-                </div>
-                <div class="col-lg-3 col-lg-offset-5">  
-                  SETS WON
-                  <input type="text" placeholder="2" name="team2_score" id="team2_score" required />
-                </div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-lg-2">  
-                    DESCRIPTION / FINAL STATUS 
-                </div>
-                <div class="col-lg-3 col-lg-offset-2">  
-                  <input type="text" placeholder="India won by 3-2 sets" name="description" id="description" required />
-                </div> 
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-lg-3 col-lg-offset-4"> 
+
+              <div class="form-group">  
+
                   <input type="text" value="update_volleyball_result" name="info" id="info" hidden> 
-                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Update">
-                </div>
+                  <input type="submit" name="btSubmit" id="submit"  value="Update" class="form-control" style="background-color: #b92d2d; color:white">
               </div>
             </form>
           </div>
@@ -439,49 +430,47 @@
       <!------------ Adding Football Results ------------------>
       <div class="modal fade" id="Football_Add">
         <div class="modal-dialog">
-          <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;margin-top: 140px;">
+          <div class="modal-content abc" style="background-color:white;text-align: center;display: inline-block;margin-top: 160px; padding:3%">
             <form method="post" id="Football_Add_Result">
               <input type="text" value="" name="football_event_id" id="football_event_id" hidden/>
               <input type="text" value="" name="football_match_id" id="football_match_id" hidden />
               <input type="text" value="" name="football_result_id" id="football_result_id" hidden />
-              <center>Update Football Result</center>
-              <div class="row">
-                <div class="col-lg-3">  
+              <div style="background-color: #b92d2d;padding:2%;color:white;">UPDATE RESULT</div>
+              <br>
+              <div class="result-ed-team">
+                <div>  
                  TEAM 1
-                  <input type="text" placeholder="India" id="football_team1" name="football_team1" value="" required readonly /> 
-                </div>
-                <div class="col-lg-1 col-lg-offset-3">  
+                  <input type="text" placeholder="India" id="football_team1" name="football_team1" value="" class="form-control" required readonly /> 
+                  </div>
+                <div >  
                   V/S 
                 </div>
-                <div class="col-lg-3 col-lg-offset-1">  
+                <div>  
                   TEAM 2 
-                  <input type="text" placeholder="MALASIA" name="football_team2" id="football_team2" value="" required readonly / > 
+                  <input type="text" placeholder="MALASIA" name="football_team2" id="football_team2" value="" class="form-control" required readonly / > 
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-3">
-                  TEAM 1 SCORE 
-                  <input type="text" placeholder="2" value="" name="football_team1_score" id="football_team1_score" required class="form-control" /> 
-                </div>
-                <div class="col-lg-3 col-lg-offset-6">
-                  TEAM 2 SCORE 
-                  <input type="text" placeholder="2" value="" name="football_team2_score" id="football_team2_score" required class="form-control" /> 
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2">  
-                    DESCRIPTION / FINAL STATUS 
-                </div>
-                <div class="col-lg-3 col-lg-offset-2">  
-                  <input type="text" placeholder="India won by 3-2 sets" name="football_description" id="football_description" required />
-                </div> 
               </div>
               <br>
-              <div class="row">
-                <div class="col-lg-3 col-lg-offset-4"> 
-                  <input type="text" value="update_football_result" name="info" id="info" hidden> 
-                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Update">
+              <div class="form-group">
+                  <label>TEAM 1</label>
+                  <input type="text" placeholder="2" value="" name="football_team1_score" id="football_team1_score" required class="form-control" /> 
+                
+                  <label>TEAM 2</label> 
+                  <input type="text" placeholder="2" value="" name="football_team2_score" id="football_team2_score" required class="form-control" /> 
                 </div>
+              
+
+                <br>
+              <div class="form-group">  
+              <label> DESCRIPTION / FINAL STATUS </label> 
+                  <input type="text" placeholder="India won by 3-2 sets" name="football_description" id="football_description" required />
+              </div>
+
+              <br>
+               <div class="form-group"> 
+                  <input type="text" value="update_football_result" name="info" id="info" hidden> 
+                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Update" style="background-color: #b92d2d; color:white">
+                
               </div>
             </form>
           </div>

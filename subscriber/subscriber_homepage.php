@@ -95,7 +95,7 @@
 
           <div>
           <p class="evnt-p">Add Post</p>
-            <input type="button" class="btn btn-success" name="addButton" value="Add Post" data-toggle="modal" data-target="#add_post"> 
+            <input type="button" class="btn btn-danger" name="addButton" value="Add Post" data-toggle="modal" data-target="#add_post"> 
           </div>
         </div>
         <br>

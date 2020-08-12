@@ -758,7 +758,7 @@
 }
 
 .news-header{
-  background-color: #b92d2d;
+  background-color: #9b8686;
   padding: 3%;
   color: white;
   text-align: center;
@@ -775,4 +775,9 @@
   height: 30px;
   background-color: #2042ea;
   color: white;
+}
+
+.result-ed-team{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
 }
