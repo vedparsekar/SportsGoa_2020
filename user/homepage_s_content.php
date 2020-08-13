@@ -19,7 +19,7 @@
         <div class="container1">
             <div class="tn-title"><i class="fa fa-caret-right"></i> Live Score</div>
             <div class="news-slider owl-carousel">
-                <div class="nt-item">Cricket: 100/2   |   Over: 15.5   |   Player1 25(15)   |   Player2 32(30)</div>
+                <div class="nt-item">Cricket: 105/2   |   Over: 15.5   |   Player1 25(15)   |   Player2 32(30)</div>
                 <div class="nt-item">Caculo College Vs New Dempo College</div>
             </div>
         </div>
