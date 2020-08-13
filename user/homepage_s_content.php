@@ -20,7 +20,7 @@
             <div class="tn-title"><i class="fa fa-caret-right"></i> Live Score</div>
             <div class="news-slider owl-carousel">
                 <div class="nt-item">Cricket: 100/2   |   Over: 15.5   |   Player1 25(15)   |   Player2 32(30)</div>
-                <div class="nt-item">South Africa Vs New Zealand</div>
+                <div class="nt-item">Caculo College Vs New Dempo College</div>
             </div>
         </div>
     </div>
@@ -72,69 +72,36 @@
                 <div class="col-lg-6">
                     <div class="ms-content">
                         <h4>Recent Results</h4>
+                        <?php
+                            $query = "SELECT * FROM results,fixtures where results.match_id=fixtures.match_id limit 3";
+                            $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
+                            if (mysql_num_rows($result) > 0) {
+                                while($row = mysql_fetch_array($result)) {
+                        ?>
                         <div class="mc-table">
                             <table>
                                 <tbody>
                                     <tr>
                                         <td class="left-team">
                                             <img src="content/world/img/match/tf-1.jpg" alt="">
-                                            <h6>Darussalam</h6>
+                                            <h6><?php echo $row['team1'];?></h6>
                                         </td>
                                         <td class="mt-content">
-                                            <div class="mc-op">Football</div>
-                                            <h4>1 : 2</h4>
+                                            <div class="mc-op"><?php echo $row['t_date']; ?></div>
+                                            <h4><?php echo $row['team1_score']?></h4>
                                             <div class="mc-op">30 March 2020</div>
                                         </td>
                                         <td class="right-team">
                                             <img src="content/world/img/match/tf-2.jpg" alt="">
-                                            <h6>Ucraina</h6>
+                                            <h6><?php echo $row['team2'];?></h6>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="mc-table">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="left-team">
-                                            <img src="content/world/img/match/tf-3.jpg" alt="">
-                                            <h6>Japan</h6>
-                                        </td>
-                                        <td class="mt-content">
-                                            <div class="mc-op">Football</div>
-                                            <h4>1 : 2</h4>
-                                            <div class="mc-op">30 March 2020</div>
-                                        </td>
-                                        <td class="right-team">
-                                            <img src="content/world/img/match/tf-4.jpg" alt="">
-                                            <h6>Philippines</h6>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="mc-table">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="left-team">
-                                            <img src="content/world/img/match/tf-5.jpg" alt="">
-                                            <h6>Kyrgyz</h6>
-                                        </td>
-                                        <td class="mt-content">
-                                            <div class="mc-op">Football</div>
-                                            <h4>1 : 2</h4>
-                                            <div class="mc-op">30 March 2020</div>
-                                        </td>
-                                        <td class="right-team">
-                                            <img src="content/world/img/match/tf-6.jpg" alt="">
-                                            <h6 class="mi-right">Pakistan</h6>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <?php
+                                }}
+                                ?>
                     </div>
                 </div>
             </div>
