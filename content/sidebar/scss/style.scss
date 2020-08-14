@@ -2,11 +2,11 @@
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
-/* $font-primary: 'Poppins',Arial, sans-serif; */
+$font-primary: 'Poppins',Arial, sans-serif;
 $primary: #2f89fc;
 
 body{
-	/* font-family: $font-primary; */
+	font-family: $font-primary;
 	font-size: 14px;
 	line-height: 1.8;
 	font-weight: normal;
