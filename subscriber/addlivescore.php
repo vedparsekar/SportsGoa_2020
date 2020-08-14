@@ -30,7 +30,7 @@
 		}
 		.scr {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
 			grid-gap: 1em;
 		}
 		.s1{
@@ -370,29 +370,8 @@
 			</div>
 		</div>
 	
-		<div class="s2">
-			<div>
-				<input class="teamname" type="text" name="" value="<?php //echo $team2_name;?>"  readonly></input>
-			</div>
-			<div class="score-overs">
-				<!--<input  class="screen2" type="text" name="screen2" id="team2" value="<?php //echo $team2;?>9" readonly></input>-->
-				<input  class="wicket2" type="text" name="screen2" id="team2" value="<?php //echo $team2;?>200/9" readonly></input>
-				<h2 style="color: white">49.8</h2>
-			</div>
-			<div>
-			<p style="color: white">RUNS:</p>
-				<button onclick="ps(this.value)" value="1" class="twobutton" name="button" align="center">+1</button>
-				<button onclick="ss(this.value)" value="1" class="minusbutton2" name="button" align="center">-1</button>
-				<button onclick="ps(this.value)" value="6" class="sixbutton" name="button" align="center">6</button>
-				<button onclick="ss(this.value)" value="4" class="fourbutton" name="button" align="center">4</button>
-				<button onclick="ss(this.value)" value="1" class="wicket" name="button" align="center">W</button>
-			</div>
-			<div>
-			<p style="color: white;">OVERS:</p>
-				<button onclick="pass(this.value)" value="1" id="onebutton" name="button" align="center">+1</button>
-				<button onclick="rass(this.value)" value="1"  id="minusbutton" name="button" align="center">-1</button>
-			</div>
-		</div>
+		
+
 		</div>
 	</form>	
 	<div class="end">
@@ -412,3 +391,7 @@
 
 </body>
 </html>
+
+
+
+
