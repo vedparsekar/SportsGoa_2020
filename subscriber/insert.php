@@ -243,6 +243,72 @@
          $message = 'Data Updated'; 
          mysqli_query($connect, $query);
 
+      } else if($action == "add_cricket_toss")
+      { //-----------------toss details
+        $event_id = mysqli_real_escape_string($connect, $_POST["toss_event_id"]);  
+        $match_id = mysqli_real_escape_string($connect, $_POST["toss_match_id"]);  
+        $team1 = mysqli_real_escape_string($connect, $_POST["toss_team1"]);
+        $team2 = mysqli_real_escape_string($connect, $_POST["toss_team2"]);
+        $toss_won = mysqli_real_escape_string($connect, $_POST["select_team"]);
+        $choice = mysqli_real_escape_string($connect, $_POST["choose"]);
+        
+        if($toss_won=$team1)
+        {
+
+            if($choice=="bat")
+            {
+              $inning1_team=$team1;
+              $inning2_team=$team2;
+              $choice1="bat";
+              $choice2="bowl";
+              $toss_winner=$team1;
+              $toss1="W";
+              $toss2="L";
+            }
+            else
+            {
+              $inning1_team=$team2;
+              $inning2_team=$team1;
+              $choice1="bat";
+              $choice2="bowl";
+              $toss_winner=$team1;
+              $toss1="L";
+              $toss2="W";
+            }
+
+        }
+
+      else
+       {
+
+            if($choice=="bat")
+            {
+              $inning1_team=$team2;
+              $inning2_team=$team1;
+              $choice1="bat";
+              $choice2="bowl";
+              $toss_winner=$team1;
+              $toss1="W";
+              $toss2="L";
+            }
+            else
+            {
+              $inning1_team=$team1;
+              $inning2_team=$team2;
+              $choice1="bat";
+              $choice2="bowl";
+              $toss_winner=$team1;
+              $toss1="L";
+              $toss2="W";
+            }
+
+       }
+
+      $query = "INSERT INTO `livecricket` ( `event_id`,`match_id`,`team_name`,`toss`,`choice`,`inning`,`status`) VALUES ('$event_id' ,'$match_id' ,'$inning1_team' ,'$toss1' , '$choice1' , '1', '1') , ('$event_id' ,'$match_id' ,'$inning2_team' ,'$toss2' , '$choice2' , '2' , '0')"; 
+
+        $message = 'Data Updated'; 
+         mysqli_query($connect, $query);
+
       } else{
 
            $query = "  

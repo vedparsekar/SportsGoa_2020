@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
-    <link rel="stylesheet" href="style.css">
     <style type="text/css">
       .a{
         text-align:center;
@@ -84,22 +83,19 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content">
-      <div class="vfixtr-heading">
-            NEWS
-          </div>
+      <div id="content" class="p-4 p-md-5 pt-5">
         <?php
 
           $query="select news_id,heading,description,date,time,place,pic from news_articles where event_id=$event_id";
-          echo "<table width='100%' border='' class='fix-table'>"; 
+          echo "<table width='83%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a fix-th'>Pic</td>";
-              echo"<td class='a fix-th'>Heading</td>";
-              echo"<td class='a fix-th'>Date</td>";
-              echo"<td class='a fix-th'>Time</td>";
-              echo"<td class='a fix-th'>Place</td>";
-              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
+              echo"<td class='a'>Pic</td>";
+              echo"<td class='a'>Heading</td>";
+              echo"<td class='a'>Date</td>";
+              echo"<td class='a'>Time</td>";
+              echo"<td class='a'>Place</td>";
+              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
               echo"</tr>";
           
               $res=mysql_query($query);
@@ -130,46 +126,51 @@
       <div class="modal-dialog">
         <div class="modal-content abc">
           <form method="post" id="Add_News_Form">
-            <div  class="panel-body" style="background-color: white;margin-top: 147px;" >
+            <div  class="panel-body" style="background: black;margin-top: 147px;" >
               <input type="hidden" value="" name="event_id" id="event_id" />
               <input type="hidden" value="" id="news_id" name="news_id" />
-
-              <div class="form-group">
-                  <label>Event Heading</label>
-                  <input type="text" name="heading" id="heading" class="form-control"required>
-              </div>
-
-              <div class="form-group">
-                <label>Description</label> 
-                <textarea name="description" id="description" class="form-control" required ></textarea>
-              </div>
-
-              <div class="form-group">
-                  <label>date</label>   
-                  <input type="Date" name="date" id="date" class="form-control" required />
-              </div>
-
-              <div class="form-group">
-              <label>time</label> 
-                  <input type="time" name="time" id="time" class="form-control" required>
-              </div>
-
-              <div class="form-group">
-                <label>place</label> 
-                  <textarea name="place" id="place" class="form-control" required></textarea>
-              </div>
-
-
-              <div class="form-group">
-              <label>picture</label> 
-                  <input type="file" name="news_pic" class="form-control" id="news_pic" >
-              </div>
-
-              <div class="form-group">
-                  <input type="text" value="update_news" name="info" id="info" hidden>
-                  <button type="submit" name="btnsave" value="Submit" id="submit" class="btn btn-default form-control">Save </button>
+              <div class="row">
+                <div class="col-lg-5">
+                  <label>Event Heading</label><input type="text" name="heading" id="heading" required>
                 </div>
-
+              </div>
+              <label><center>Description</center></label> 
+              <div class="row">
+                <div  class="col-lg-5" >
+                  <textarea name="description" id="description" required ></textarea>
+                </div>
+              </div>
+              <label><center>date</center></label> 
+              <div class="row">
+                <div  class="col-lg-5">
+                  <input type="Date" name="date" id="date" required />
+                </div>
+              </div>
+              <label><center>   time </center></label> 
+              <div class="row">
+                <div  class="col-lg-5">
+                  <input type="time" name="time" id="time" required>
+                </div>
+              </div>
+              <label><center>place</center></label> 
+              <div class="row">
+                <div  class="col-lg-5">
+                  <textarea name="place" id="place" required></textarea>
+                </div>
+              </div>
+              <label><center>picture</center></label> 
+              <div class="row">
+                <div  class="col-lg-5">
+                  <input type="file" name="news_pic" id="news_pic" >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-lg-offset-2">
+                  <br>
+                  <input type="text" value="update_news" name="info" id="info" hidden>
+                  <button type="submit" name="btnsave" value="Submit" id="submit" class="btn btn-default"> </button>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -186,39 +187,37 @@
             <div class='row'>
               <div class='col-sm-offset-0 col-sm-12'>
                 <div class='panel panel-success'>
-                  <div style='color: white;background-color: #b92d2d;;text-transform:uppercase;' class='panel-heading'>
-                    <div id='view_heading' style="height:40px;font-size:20px;background-color: #b92d2d; text-align: center;"> </div>
+                  <div style='color: white; background:black;text-transform:uppercase;' class='panel-heading'>
+                    <center><div id='view_heading' style="height:40px;font-size:22px;"> </div></center>
                   </div>
                   <div style='color: black; background:white;' class='panel-body'>
                   <div class='row'>
-                    
                      <div class='col-lg-10 col-lg-offset-1'>
                         <br>
                         <div class='row'>
                           <div class='col-lg-3 col-lg-offset-0' style='background:white;'>
-                            <textarea id='view_date' class='form-control' style='width:100px;height:30px;margin:3%;' disabled> </textarea>  
+                            <textarea id='view_date' class='form-control' style='width:100px;height:30px;' disabled> </textarea>  
                           </div>
                           <div class='row'>
                             <div class='col-lg-3 col-lg-offset-1' style='background:white;'>
-                              <textarea id='view_time' class='form-control' style='width:100px;height:30px;margin:3%;' disabled> </textarea>            
+                              <textarea id='view_time' class='form-control' style='width:100px;height:30px;margin-left:-10px' disabled> </textarea>            
                             </div>
                           </div>
                           <br/>
                           <div class='row'>
-                            <div class='col-lg-3 col-lg-offset-8'>
-                              <textarea id='view_place' class='form-control' style='width:100px;height:30px;margin:3%;' disabled></textarea>            
+                            <div class='col-lg-3 col-lg-offset-8' style='margin-top:-50px;'>
+                              <textarea id='view_place' class='form-control' style='width:100px;height:30px;margin-top:50px;margin-left:30px;' disabled></textarea>            
                             </div>
                           </div>
                         </div>
                         <div class='row'>
                           <div class='col-lg-10 col-lg-offset-1' >
-                            <br><br><center><div style="font-size:15px;min-height:100px; ;max-height: 400px;width:500px;margin-left:-50px;overflow-y: scroll;" id='view_description'></center>
+                            <br><br><center><div style="font-size:20px;min-height:100px; ;max-height: 400px;width:500px;margin-left:-50px;overflow-y: scroll;" id='view_description'></center>
                               <br>
                             <br>
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>

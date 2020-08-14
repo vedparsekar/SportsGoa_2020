@@ -14,8 +14,6 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
-    <link rel="stylesheet" href="style.css">
-
     <style type="text/css">
       .tab_res{
         width: 1000px;
@@ -24,7 +22,8 @@
     <style type="text/css">
       .a{
         text-align:center;
-
+        padding-left: 1px;
+        padding-right: 1px;
       }
       .b{
         padding-left: 5px;
@@ -89,12 +88,11 @@
     	</nav>
 
       <!-- Page Content  -->
-      <div id="content">
+      <div id="content" class="p-4 p-md-5 pt-5" class="tab_res" style="width: 1000px;">
+        <div  class="container-fluid">
+          <div class="row">
+          <div class="col-lg-3 col-lg-offset-0" >
 
-      <div class="vfixtr-heading">
-            RESULT
-          </div>
-          
           <?php 
         //   //*********************proper table *******************//
         // $query = "SELECT * FROM `fixtures` WHERE `match_id` NOT IN (select `match_id` from `results`) AND`event_id`='$event_id'";
@@ -152,25 +150,23 @@
              //echo"<td>EVENT ID</td>";
               //echo"<td>MATCH ID</td>";
               //echo"<td>DATE</td>";
-              echo "<table width='100%' border='1' class='fix-table'>"; 
-              echo"<tr>";
-              echo"<td class='a fix-th'>TEAM 1</td>";
-              echo"<td class='a fix-th'>TEAM 2</td>";
-              echo"<td class='a fix-th'>TEAM1 SCORE</td>";
-              echo"<td class='a fix-th'>TEAM2 SCORE</td>";
-              echo"<td class='a fix-th'>FINAL RESULT</td>";
-              echo"<td colspan=2 class='a fix-th'>ACTION</td>";
+              echo"<td>TEAM 1</td>";
+              echo"<td>TEAM 2</td>";
+              echo"<td>TEAM1 SCORE</td>";
+              echo"<td>TEAM2 SCORE</td>";
+              echo"<td>FINAL RESULT</td>";
+              echo"<td colspan=2>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
                  // echo "<td>".$row['event_id']."</td>"; 
                   //echo "<td>".$row['match_id']."</td>";
                   //echo "<td>".$row['t_date']."</td>";  
-                  echo "<td class='a'>".$row['team1']."</td>";
-                  echo "<td class='a'>".$row['team2']."</td>";
-                  echo "<td class='a'>".$row['team1_score']."</td>";
-                  echo "<td class='a'>".$row['team2_score']."</td>";
-                  echo "<td class='a'>".$row['description']."</td>"; 
+                  echo "<td>".$row['team1']."</td>";
+                  echo "<td>".$row['team2']."</td>";
+                  echo "<td>".$row['team1_score']."</td>";
+                  echo "<td>".$row['team2_score']."</td>";
+                  echo "<td>".$row['description']."</td>"; 
                    
                   
                   //shows the Delete and edit link for each row
@@ -179,7 +175,7 @@
                  // echo "<td><a href=football_result_edit.php?id=".$row['result_id'].">    Update</a></td>"; 
                   echo "</tr>"; 
               } 
-              echo"
+              echo"</tbody>
                 </table>
                 </div>"; 
           }
@@ -194,19 +190,19 @@
           $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
           if (mysql_num_rows($result) > 0) 
           { 
-              echo "<table width='100%' border='' class='fix-table'>"; 
+              echo "<table width='450%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
               echo"<tr>";
-              echo"<td class='a fix-th'>Team1</td>";
-              echo"<td class='a fix-th'>Team2</td>";
-              echo"<td class='a b fix-th'>Set1</td>";
-              echo"<td class='a b fix-th'>Set2</td>";
-              echo"<td class='a b fix-th'>Set3</td>";
-              echo"<td class='a b fix-th'>Set4</td>";
-              echo"<td class='a b fix-th'>Set5</td>";
-              echo"<td class='a fix-th'>Team1 Score</td>";
-              echo"<td class='a fix-th'>Team2 Score</td>";
-              echo"<td class='a fix-th'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
+              echo"<td class='a'>Team1</td>";
+              echo"<td class='a'>Team2</td>";
+              echo"<td class='a b'>Set1</td>";
+              echo"<td class='a b'>Set2</td>";
+              echo"<td class='a b'>Set3</td>";
+              echo"<td class='a b'>Set4</td>";
+              echo"<td class='a b'>Set5</td>";
+              echo"<td class='a'>Team1 Score</td>";
+              echo"<td class='a'>Team2 Score</td>";
+              echo"<td class='a'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -240,15 +236,15 @@
             $query = "Select fixtures.match_id,fixtures.t_date, fixtures.team1,fixtures.team2, results.team1_score,results.team2_score,results.description,results.result_id  from fixtures,results where results.match_id=fixtures.match_id and results.event_id=$event_id"; 
             $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
             if (mysql_num_rows($result) > 0) { 
-              echo "<table width='100%' border='' class='fix-table'>"; 
+              echo "<table width='400%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a fix-th'>Team1</td>";
-              echo"<td class='a fix-th'>Team2</td>";
-              echo"<td class='a fix-th'>Team1 Score</td>";
-              echo"<td class='a fix-th'>Team2 Score</td>";
-              echo"<td class='a fix-th'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
+              echo"<td class='a'>Team1</td>";
+              echo"<td class='a'>Team2</td>";
+              echo"<td class='a'>Team1 Score</td>";
+              echo"<td class='a'>Team2 Score</td>";
+              echo"<td class='a'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -275,15 +271,15 @@
             $query = "Select fixtures.match_id,fixtures.t_date, fixtures.team1,fixtures.team2, results.team1_score,results.team2_score,results.description,results.result_id  from fixtures,results where results.match_id=fixtures.match_id and results.event_id=$event_id"; 
             $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
             if (mysql_num_rows($result) > 0) { 
-              echo "<table width='100%' border='' class='fix-table'>"; 
+              echo "<table width='400%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a fix-th'>Team1</td>";
-              echo"<td class='a fix-th'>Team2</td>";
-              echo"<td class='a fix-th'>Team1 Score</td>";
-              echo"<td class='a fix-th'>Team1 Score</td>";
-              echo"<td class='a fix-th'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
+              echo"<td class='a'>Team1</td>";
+              echo"<td class='a'>Team2</td>";
+              echo"<td class='a'>Team1 Score</td>";
+              echo"<td class='a'>Team1 Score</td>";
+              echo"<td class='a'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -311,15 +307,15 @@
             $result = mysql_query($query,  $connection) or die ("Error in query: ".$query. " ".mysql_error());
             if (mysql_num_rows($result) > 0) 
             { 
-              echo "<table width='100%' border='' class='fix-table'>"; 
+              echo "<table width='400%' height='12%' border='1' align='center' bordercolor=black style='color:#3b3e40;align:center;'>"; 
               echo"<tr>";
               //echo"<td>EVENT ID</td>";
-              echo"<td class='a fix-th'>Team1</td>";
-              echo"<td class='a fix-th'>Team2</td>";
-              echo"<td class='a fix-th'>Team1 Score</td>";
-              echo"<td class='a fix-th'>Team1 Score</td>";
-              echo"<td class='a fix-th'>Final Result</td>";
-              echo"<td colspan=2 align='center' class='b fix-th'>ACTION</td>";
+              echo"<td class='a'>Team1</td>";
+              echo"<td class='a'>Team2</td>";
+              echo"<td class='a'>Team1 Score</td>";
+              echo"<td class='a'>Team1 Score</td>";
+              echo"<td class='a'>Final Result</td>";
+              echo"<td colspan=2 align='center' class='b'>ACTION</td>";
               echo"</tr>";
               while($row = mysql_fetch_array($result)) { 
                   echo "<tr>"; 
@@ -348,79 +344,92 @@
     }
 
           ?>
-      </div>  
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>  
 <!-------------------- Bootstrap modals for Adding Results -------------------------------------->       
 
 
 <!------------ Adding Volleyball Results ------------------>
       <div class="modal fade" id="Volleyball_Add">
         <div class="modal-dialog">
-          <div class="modal-content abc" style="background-color:white;text-align: center;display: inline-block;margin-top: 160px; padding:3%">
+          <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;margin-top: 140px;">
             <form method="post" id="Volleyball_Add_Result">
               <input type="text" value="" name="event_id" id="event_id" hidden/>
               <input type="text" value="" name="match_id" id="match_id" hidden />
               <input type="text" value="" name="result_id" id="result_id" hidden />
-              <div style="background-color: #b92d2d;padding:2%;color:white;">UPDATE RESULT</div>
-              <div class="result-ed-team">
-                <div>  
+              <center>Update Result</center>
+              <div class="row">
+                <div class="col-lg-3">  
                  TEAM 1
-                  <input type="text" placeholder="India" id="team1" name="team1" value="" class="form-control"  required readonly /> 
+                  <input type="text" placeholder="India" id="team1" name="team1" value="" required readonly /> 
                 </div>
-                <div >  
+                <div class="col-lg-1 col-lg-offset-3">  
                   V/S 
                 </div>
-                <div >  
+                <div class="col-lg-3 col-lg-offset-1">  
                   TEAM 2 
-                  <input type="text" placeholder="MALASIA" name="team2" id="team2" value="" class="form-control" required readonly /> 
+                  <input type="text" placeholder="MALASIA" name="team2" id="team2" value="" required readonly / > 
                 </div>
               </div>
-
               <br>
-              <div class="form-group">
-                <label>SET 1</label>
-                  <input type="text" placeholder="21-20" name="set1" id="set1" class="form-control" required /> 
+              <div class="row">
+                set1
+                <div class="col-lg-3 col-lg-offset-4">  
+                  <input type="text" placeholder="21-20" name="set1" id="set1" required /> 
+                </div>
               </div>
-
-              <div class="form-group">
-              <label>SET 2</label> 
-                  <input type="text" placeholder="21-19" name="set2" id="set2" class="form-control" required /> 
+              <div class="row">
+                set2
+                <div class="col-lg-3 col-lg-offset-4">  
+                  <input type="text" placeholder="21-19" name="set2" id="set2" required /> 
+                </div>
               </div>
-
-              <div class="form-group">
-              <label>SET 3</label> 
-                  <input type="text" placeholder="18-21" name="set3" id="set3" class="form-control" required /> 
+              <div class="row">
+                set3
+                <div class="col-lg-3 col-lg-offset-4">  
+                  <input type="text" placeholder="18-21" name="set3" id="set3" required /> 
+                </div>
               </div>
-
-              <div class="form-group">
-              <label>SET 4</label> 
-                  <input type="text" placeholder="20-21" name="set4" id="set4" class="form-control" /> 
+              <div class="row">
+                set4
+                <div class="col-lg-3 col-lg-offset-4">  
+                  <input type="text" placeholder="20-21" name="set4" id="set4" /> 
+                </div>
               </div>
-
-              <div class="form-group">
-              <label>SET 5</label>
-                  <input type="text" placeholder="21-17" name="set5" id="set5" class="form-control" /> 
+              <div class="row">
+                set5
+                <div class="col-lg-3 col-lg-offset-4">  
+                  <input type="text" placeholder="21-17" name="set5" id="set5" /> 
+                </div>
               </div>
-
-              <div class="form-group">  
-                  <label>SETS WON</label> 
-                  <input type="text" placeholder="3" name="team1_score" id="team1_score" class="form-control" required /> 
-     
-                  <label>SETS WON</label> 
-                  <input type="text" placeholder="2" name="team2_score" id="team2_score" class="form-control" required />
-            
+              <div class="row">
+                <div class="col-lg-3">  
+                  SETS WON 
+                  <input type="text" placeholder="3" name="team1_score" id="team1_score" required /> 
+                </div>
+                <div class="col-lg-3 col-lg-offset-5">  
+                  SETS WON
+                  <input type="text" placeholder="2" name="team2_score" id="team2_score" required />
+                </div>
               </div>
-
               <br>
-              <div class="form-group">  
-                   <label> DESCRIPTION / FINAL STATUS </label>  
-                  <input type="text" placeholder="India won by 3-2 sets" name="description" id="description" class="form-control" required />
+              <div class="row">
+                <div class="col-lg-2">  
+                    DESCRIPTION / FINAL STATUS 
+                </div>
+                <div class="col-lg-3 col-lg-offset-2">  
+                  <input type="text" placeholder="India won by 3-2 sets" name="description" id="description" required />
+                </div> 
               </div>
               <br>
-
-              <div class="form-group">  
-
+              <div class="row">
+                <div class="col-lg-3 col-lg-offset-4"> 
                   <input type="text" value="update_volleyball_result" name="info" id="info" hidden> 
-                  <input type="submit" name="btSubmit" id="submit"  value="Update" class="form-control" style="background-color: #b92d2d; color:white">
+                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Update">
+                </div>
               </div>
             </form>
           </div>
@@ -430,47 +439,49 @@
       <!------------ Adding Football Results ------------------>
       <div class="modal fade" id="Football_Add">
         <div class="modal-dialog">
-          <div class="modal-content abc" style="background-color:white;text-align: center;display: inline-block;margin-top: 160px; padding:3%">
+          <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;margin-top: 140px;">
             <form method="post" id="Football_Add_Result">
               <input type="text" value="" name="football_event_id" id="football_event_id" hidden/>
               <input type="text" value="" name="football_match_id" id="football_match_id" hidden />
               <input type="text" value="" name="football_result_id" id="football_result_id" hidden />
-              <div style="background-color: #b92d2d;padding:2%;color:white;">UPDATE RESULT</div>
-              <br>
-              <div class="result-ed-team">
-                <div>  
+              <center>Update Football Result</center>
+              <div class="row">
+                <div class="col-lg-3">  
                  TEAM 1
-                  <input type="text" placeholder="India" id="football_team1" name="football_team1" value="" class="form-control" required readonly /> 
-                  </div>
-                <div >  
+                  <input type="text" placeholder="India" id="football_team1" name="football_team1" value="" required readonly /> 
+                </div>
+                <div class="col-lg-1 col-lg-offset-3">  
                   V/S 
                 </div>
-                <div>  
+                <div class="col-lg-3 col-lg-offset-1">  
                   TEAM 2 
-                  <input type="text" placeholder="MALASIA" name="football_team2" id="football_team2" value="" class="form-control" required readonly / > 
+                  <input type="text" placeholder="MALASIA" name="football_team2" id="football_team2" value="" required readonly / > 
                 </div>
               </div>
-              <br>
-              <div class="form-group">
-                  <label>TEAM 1</label>
+              <div class="row">
+                <div class="col-lg-3">
+                  TEAM 1 SCORE 
                   <input type="text" placeholder="2" value="" name="football_team1_score" id="football_team1_score" required class="form-control" /> 
-                
-                  <label>TEAM 2</label> 
+                </div>
+                <div class="col-lg-3 col-lg-offset-6">
+                  TEAM 2 SCORE 
                   <input type="text" placeholder="2" value="" name="football_team2_score" id="football_team2_score" required class="form-control" /> 
                 </div>
-          
-                <br>
-                
-              <div class="form-group">  
-              <label> DESCRIPTION / FINAL STATUS </label> 
-                  <input type="text" placeholder="India won by 3-2 sets" name="football_description" id="football_description" required />
               </div>
-
+              <div class="row">
+                <div class="col-lg-2">  
+                    DESCRIPTION / FINAL STATUS 
+                </div>
+                <div class="col-lg-3 col-lg-offset-2">  
+                  <input type="text" placeholder="India won by 3-2 sets" name="football_description" id="football_description" required />
+                </div> 
+              </div>
               <br>
-               <div class="form-group"> 
+              <div class="row">
+                <div class="col-lg-3 col-lg-offset-4"> 
                   <input type="text" value="update_football_result" name="info" id="info" hidden> 
-                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Update" style="background-color: #b92d2d; color:white">
-                
+                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Update">
+                </div>
               </div>
             </form>
           </div>

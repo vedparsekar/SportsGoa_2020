@@ -18,152 +18,6 @@
       .a{
         text-align:center;
       }
-
-    .score{
-      float:center;
-      background-image: url("../content/world/img/match/match-bg.jpg"),
-      linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
-        background-blend-mode: overlay;
-      
-    }
-    .end{
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding:5%;
-    }
-    .ed{
-      background-color: #f81f29;
-      color: white;
-      padding: 5px;
-      border-radius: 5px;
-    }
-    .scr {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1em;
-    }
-    .s1{
-      float:left;
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      grid-gap: 1em;
-    }
-    
-    .match{
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding:1%;
-      background-color: #f81f29;
-      color: white;
-    }
-    
-    .s2{
-      float:right;
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      grid-gap: 1em;
-    }
-
-
-        .screen1,.wicket1
-    {
-      height:100px;
-      width: 100px;
-      float:left;
-      text-align: center;
-      font-size:35px;
-      border-style:none;
-            border-radius: 20px;
-
-    }
-    .screen2,.wicket2
-    {
-      height:100px;
-      width: 100px;
-      float:right;
-      text-align: center;
-      font-size:35px;
-      border-style:none;
-            border-radius: 20px;
-    }
-    #onebutton
-    {
-      height: 40px;
-      width:  40px; 
-      background-color: #1fc90f;
-      color: white;
-      border-style: none;
-      border-radius: 5px;
-    }
-    #minusbutton
-    {
-      height: 40px;
-      width:  40px;
-      background-color: #f81f29;
-      color: white;
-      border-style: none;
-      border-radius: 5px;
-    }
-    .twobutton
-    {
-      height: 40px;
-      width:  40px; 
-      background-color: #1fc90f;
-      color: white;
-      border-style: none;
-      border-radius: 5px;
-    }
-    .minusbutton2
-    {
-      height: 40px;
-      width:  40px;
-      background-color: #f81f29;
-      color: white;
-      border-style: none;
-      border-radius: 5px;
-    }
-
-        .sixbutton{
-      background-color: #203ddf;
-    }
-    .wicket{
-      background-color: #f81f29;
-    }
-    .fourbutton{
-      background-color: #203ddf;
-    }
-
-    .fourbutton,.sixbutton,.wicket{
-      height: 40px;
-      width:  40px;
-      color: white;
-      border-style: none;
-      border-radius: 5px;
-
-    }
-    .teamname{
-      border-style: none;
-      text-transform: uppercase;
-      font-weight: bold; 
-      text-align: center;
-    }
-        .score-overs{
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
-    .liv-btn{
-      display: grid;
-      grid-template-columns: 1fr 1f 1fr 1fr;
-      grid-gap: 5%;   
-      margin: 20%;
-
-    }
-
     </style>    
   </head>
   <body>
@@ -290,8 +144,8 @@
                         }
                       ?> 
                         >    Add Result</a></td>
-
-                        <td class="a"><a style="color:#337ab7;" id="<?php echo $row['match_id']; ?>" 
+                  
+                    <td class="a"><a style="color:#337ab7;" id="<?php echo $row['match_id']; ?>" 
                     
                     <?php 
                         if($game_category=="hockey")
@@ -316,6 +170,7 @@
                         }
                       ?> 
                         >    Add Livescore</a></td>
+
                   <?php 
                   echo "</tr>"; 
               } 
@@ -508,8 +363,8 @@
       </div>
 
     <!--------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------------------> 
-    
-      <!------------ Adding Cricket Livescore(Toss) ------------------>
+
+    <!------------ Adding Cricket Livescore(Toss) ------------------>
       <div class="modal fade" id="Toss_Modal">
         <div class="modal-dialog">
           <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;margin-top: 140px;">
@@ -521,7 +376,7 @@
               <div class="row">
                 <div class="col-lg-3">  
                  TEAM 1
-                  <input type="text" name="toss_team1" id="toss_team1" required readonly/> 
+                  <input type="text" name="toss_team1" id="toss_team1" class="form-control" required readonly/> 
                 </div>
                 <div class="col-lg-1 col-lg-offset-3">  
                   V/S 
@@ -536,7 +391,7 @@
                
               Toss Won : &nbsp;&nbsp;
 
-              <select name="toss_won" id="select_team" required>
+              <select name="toss_won" required>
                 <option value="">Select Team </option>
                 <option value="<?php //echo$row[2];?>"><?php //echo$row[2];?></option>
                 <option value="<?php //echo$row[3];?>"><?php //echo$row[3];?></option>
@@ -556,7 +411,7 @@
               <div class="row">
                 <div class="col-lg-3 col-lg-offset-4">  
                   <input type="text" value="add_cricket_toss" name="info" id="info" hidden> 
-                  <input type="submit" name="btSubmit" id="submit" value="Proceed">
+                  <input type="submit" name="btSubmit" id="submit" class="form-control" value="Proceed">
                 </div>
               </div>
             </form>
@@ -565,8 +420,6 @@
       </div>
 
     <!--------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------------------> 
-
-
 
     <!--------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx----------------------->                           
       </div>      
@@ -579,109 +432,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>     
-
-<script >
-  $(function() {
-
-    //************************* Add cricket toss ************ 
-      $(document).on('click', '.add_cricket_toss', function() {
-        var edit_match_id = $(this).attr("id");
-        
-        $.ajax({
-            url: "fetch.php",
-            method: "POST",
-            data: {
-                edit_match_id: edit_match_id
-            },
-            dataType: "json",
-            success: function(data) {
-
-              $('#toss_event_id').val(data.event_id);
-              $('#toss_match_id').val(data.match_id);
-              $('#toss_team1').val(data.team1);
-              $('#toss_team2').val(data.team2);
-              var team1 = $('#toss_team1').val();
-              var team2 = $('#toss_team2').val(); 
-              
-              var selectValues = {};
-               selectValues[team1]=team1;
-               selectValues[team2]=team2;
-                var $mySelect = $('#select_team');
-                $mySelect.empty();
-                var $opt = $("<option/>", {
-                    value: "",
-                    text: "select"
-                  });
-                  $mySelect.append($opt);
-                $.each(selectValues, function(key, value) {
-                  var $option = $("<option/>", {
-                    value: key,
-                    text: value
-                  });
-                  $mySelect.append($option);
-                });
-
-                  //sending to check if match id exist inn livecricket
-                  $.ajax({
-                    url: "fetch.php",
-                    method: "POST",
-                    data: {
-                        fetch_match_livescricket : edit_match_id
-                    },
-                    dataType: "json",
-                    success: function(data) {
-
-                      if(data)
-                      {
-                        window.location = "livecricket.php?id="+edit_match_id;
-                        //match id present in livecricket
-                        //$('#cricket_livescore').modal('show');
-                        //alert("1"); 
-                      }
-                      else
-                      {
-                        //match not present
-                        $('#Toss_Modal').modal('show');
-                        //alert("2");
-                      }
-
-                    }
-
-                    });                              
-            }
-          });
-      });
-
-    $('#Toss_Form').on("submit", function(event) {
-    event.preventDefault();
-    var match_id1 = $('#toss_match_id').val();
-    if ($('#toss_event_id').val() == "") {
-        alert("Event Id required");
-    }else {
-        $.ajax({
-            url: "insert.php",
-            method: "POST",
-            data: $('#Toss_Form').serialize(),
-            beforeSend: function() {
-              $('#insert').val("Inserting");
-              
-            },
-            success: function(data) {
-                $('#Toss_Form')[0].reset();
-                $('#Toss_Modal').modal('hide');
-                window.location = "livecricket.php?id="+match_id1;
-
-                //action here 
-            }
-        });
-      }
-    });
-
-      //******************    *****************    
-  });
-
-</script>
-
 <script>  
  $(document).ready(function() {
   $('#add').click(function() {
@@ -820,32 +570,53 @@
         });
       }
     });
-          
+  
+    //************************* Add cricket toss ************
+    
+    $(document).on('click', '.add_cricket_toss', function() {
+      var edit_match_id = $(this).attr("id");
+      $.ajax({
+          url: "fetch.php",
+          method: "POST",
+          data: {
+              edit_match_id: edit_match_id
+          },
+          dataType: "json",
+          success: function(data) {
+              $(#toss_event_id).val(data.event_id);
+              $(#toss_match_id).val(data.match_id);
+              $(#toss_team1).val(data.team1);
+              $(#toss_team2).val(data.team2);
+              $('#Toss_Modal').modal('show');              
+          }
+        });
+    });
+
 });
  </script>
 
- <script type="text/javascript">
-$(function() {
-$(".delete").click(function(){
-  var delete_match_id = $(this).attr("id");
-  if(confirm("Are you sure you want to delete this Post?"))
-  {
-   $.ajax({
-     type: "POST",
-     url: "deleteMyData.php",
-      data: {
-          delete_match_id: delete_match_id
-      },
-     success: function()
-     {
-      location.reload();
-     }
-    });
-  }
+  <script type="text/javascript">
+    $(function() {
+    $(".delete").click(function(){
+      var delete_match_id = $(this).attr("id");
+      if(confirm("Are you sure you want to delete this Post?"))
+      {
+       $.ajax({
+         type: "POST",
+         url: "deleteMyData.php",
+          data: {
+              delete_match_id: delete_match_id
+          },
+         success: function()
+         {
+          location.reload();
+         }
+        });
+      }
 
-});
-});
-</script> 
+    });
+    });
+  </script> 
 
     <?php
       include("../footer.php");
