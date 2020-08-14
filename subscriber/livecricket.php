@@ -41,14 +41,12 @@ while($row = mysql_fetch_array($result4))
   	<title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
   <style type="text/css">
@@ -61,6 +59,11 @@ while($row = mysql_fetch_array($result4))
       border-radius:40px;
     }
 
+      .ini{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
     
     .dropdown
     {
@@ -71,35 +74,44 @@ while($row = mysql_fetch_array($result4))
     {
       height:150px;
       width: 150px;
-      margin-top:54px;
-      float:left;
-      margin-left:180px;
       text-align: center;
       font-size:70px;
       border-radius: 20px;
 
     }
+    
+    .nteam{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
     .screen12
     {
-      height:100px;
-      width: 100px;
-      margin-top:84px;
-      float:left;
-      margin-left:10px;
+      height:120px;
+      width: 120px;
       text-align: center;
       font-size:50px;
       border-radius: 20px;
 
     }
+    .endm{
+      background-color: #f13030;
+      color: white;
+      font-size: 15px;
+      border-radius: 3px;
+    }
+    .ed{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      margin-top: 5%;
+        }
 
     .overscreen
     {
-      height:100px;
-      width: 100px;
-      margin-top:84px;
-      float:left;
-      margin-left:10px;
-      text-align: center;
+      height:120px;
+      width: 120px;
       font-size:50px;
       border-radius: 20px;
     }
@@ -109,79 +121,103 @@ while($row = mysql_fetch_array($result4))
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left: -350px;
-      margin-top: 200px
+      border-style: none;
+      border-radius: 4px;
+      background-color: #4ef156;
+      color: white;
     }
     #minusbutton
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-280px;
-      margin-top: 200px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #f13030;
+      color: white;
 
     }
     .four
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-350px;
-      margin-top: 245px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #525cf0;
+      color: white;
+     
     }
     .six
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-280px;
-      margin-top: 245px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #525cf0;
+      color: white;
+    
     }
     #noball
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-350px;
-      margin-top: 290px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #b8b3b3;
+      color: white;
     }
     
     #wideball
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-280px;
-      margin-top: 290px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #b8b3b3;
+      color: white;
+     
     }
 
     .wicket1
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-210px;
-      margin-top: 160px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #f13030;
+      color: white;
+      
 
     }
     .total
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-160px;
-      margin-top: 160px;
+      border-style: none;
+      background-color: #4ef156;
+      color: white;
+      border-radius: 4px;
 
     }
-    .over
+    .overb
     {
       height: 25px;
       width:  50px;
-      float: left;
-      margin-left:-75px;
-      margin-top: 160px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: #525cf0;
+      color: white;
+  
     }
+    .sco{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-left: 25%;
+      margin-right: 25%;
+      justify-items: center;
+     
+    }
+
+
 
   </style>
 
@@ -190,13 +226,16 @@ while($row = mysql_fetch_array($result4))
     var count = 0;
     function over(x)
     {
-        var value = parseInt(document.getElementById('overscreen').value);
-        var balls = x*1 + count;
-        var rem = balls % 6;
-        var quo = parseInt(balls/6 , 10);
-        document.getElementById('overscreen').value = quo+'.'+rem;
-        //alert(count);
-        count++;
+        var value = document.getElementById('overscreen').value;
+       // console.log("value"+value);
+        var res=value.split('.');
+        if(res[1]=='5'){
+          res[0] = parseInt(res[0],10) + 1;
+          res[1] = '0';
+        }
+       else
+       res[1] = res[1]*1 + 1;
+       document.getElementById('overscreen').value=res[0]+'.'+res[1];
     }
 
     function four()
@@ -269,7 +308,7 @@ while($row = mysql_fetch_array($result4))
 
   </script>
   </head>
-  <body>
+  <body style="font-family: Arial, Helvetica, sans-serif;">
 		
     <?php
       include("header.php");
@@ -328,59 +367,79 @@ while($row = mysql_fetch_array($result4))
       <div id="content" class="p-4 p-md-5 pt-5">
       <div style="color:black;">  
   <form> 
-    <h3 align="left">CRICKET</h3>
-    <div align="center"><input type="hidden" name="match_id" id="team123" value="<?php echo $match_id; ?>" ></input><br/>
-      <input type="text" name="" value="<?php echo $team1_name;?>"  readonly></input> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="text" name="" value="<?php echo $team2_name;?>"  readonly></input>
-      <br/><br/>
+    <h3 style="text-align: center;">CRICKET</h3>
+    <br>
+    <div align="center">
+      <input type="hidden" name="match_id" id="team123" value="<?php echo $match_id; ?>" ></input>
+      <div class="nteam">
+        <input type="text" name="" value="<?php echo $team1_name;?>"  readonly></input>
+        <h6><b>V/S</b></h6>
+        <input type="text" name="" value="<?php echo $team2_name;?>"  readonly></input>
+      </div>
+     <br>
       <div align="center">
         
       <?php
         if($inning>1)
         { 
-          echo "<span style='background:lightgrey' >";
-          echo "<a href='previous_inning.php?id=".$reg_id."' > First Inning </a>  ";
+          echo "<span  >";
+          echo "<a href='previous_inning.php?id=".$reg_id."'  style='background-color:#382eee; color:white; padding:3px;border-radius:4px; font-size:12px;'>FIRST INNING </a>  ";
           echo "</span>";
         }  
       ?>
-
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <?php
       if($inning<2)
       { echo "<span style='background:lightgrey;'>";
-        echo "<a href='next_inning.php?id=".$reg_id."' >  Second Inning  </a>";
+        echo "<a href='next_inning.php?id=".$reg_id."'  style='background-color:#382eee; color:white; padding:3px;border-radius:4px; font-size:12px;'>SECOND INNING </a>";
         echo "</span>";
       }
      ?>
       <br/>
-    <h3>Inning <?php echo $inning; ?>  </h3>
+    <h3 style="text-transform: uppercase;">Inning:<?php echo $inning; ?>  </h3>
     <br/>
     
     </div>
   <br/>
     
     </div>
+<div class="sco">
 
-  Score : 
-  <input  class="screen1" type="text" name="screen1" id="team1" value="<?php echo $runs; ?>" readonly></input>
-  Wickets :
-  <input  class="screen12" type="text" name="screen12" id="team12" value="<?php echo $wickets ?>"  readonly></input>
-  Overs :
-  <input  class="overscreen" type="text" name="overscreen" id="overscreen" value="<?php echo $overs ?>"  readonly></input>
-  <br>
-  
-  <button onclick="pass(this.value)"  id="onebutton" align="center" name="button">1 </button>
+  <div>
+   <p style="text-align: center;">SCORE</p>
+    <input  class="screen1" type="text" name="screen1" id="team1" value="<?php echo $runs; ?>" readonly></input>
+    <br>
+    <button onclick="pass(this.value)"  id="onebutton" align="center" name="button">1 </button>
   <button onclick="rass(this.value)"  value="1" id="minusbutton" align="center" name="button">-1</button>
   <button onclick="four(this.value)" id="4" class="four" align="center" name="button">4</button>
   <button onclick="six(this.value)" id="6" class="six" align="center" name="button">6</button>
-  <button onclick="wicket1(this.value)" id="1" class="wicket1" name="button" align="center">1</button>
-  <button onclick="total(this.value)" id="1" value="1" class="total" name="button" align="center">-1</button>
   <button onclick="pass(this.value)"  id="noball" align="center" name="button">NB</button>
   <button onclick="pass(this.value)"  id="wideball" align="center" name="button">WB</button>
+    
+  </div>
+
+  <div>
+  <p style="text-align: center;">WICKET</p>
+    <input  class="screen12" type="text" name="screen12" id="team12" value="<?php echo $wickets ?>"  readonly></input>
+    <button onclick="wicket1(this.value)" id="1" class="wicket1" name="button" >1</button>
+  <button onclick="total(this.value)" id="1" value="1" class="total" name="button" >-1</button> 
+  </div>
+
+  <div>
+  <p style="text-align: center;">OVER</p>
+    <input  class="overscreen" type="text" name="overscreen" id="overscreen" value="<?php echo $overs ?>"  readonly></input>
+    <button onclick="over(this.value)"  class="overb" value=1 name="button">1</button>
+    </div>
+
+</div>
+  <br>
   
-  <button onclick="over(this.value)"  class="over" value=1 name="button" align="center">1ball</button>
+  
+
+  
+  
+  
 </form>
-     <div align="right">
+     <div class="ini">
     <?php
 
     $query11="select * from livecricket where match_id='$match_id'";
@@ -396,20 +455,17 @@ while($row = mysql_fetch_array($result4))
         $inning=$row['inning'];
       ?>
        
-    Inning <?php echo $inning; ?> &nbsp;&nbsp;&nbsp;   <input  class="set_no" type="text" name="inning"  value="<?php echo $runs; ?> / <?php echo $wickets; ?>" readonly></input> <?php echo $overs; ?> overs  <br/>
-
+    Inning <?php echo $inning; ?> <input  class="set_no" type="text" name="inning"  value="<?php echo $runs; ?> / <?php echo $wickets; ?>" readonly></input> <?php echo $overs; ?> overs  <br/>
 
       <?php
     }
     
     ?> 
-
     </div>
 
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <div>
-      <span style="background:lightgrey;">
-        <a href="cricket_live_result.php?id=<?php echo $match_id; ?>" >  END MATCH </a>
+      <span class="ed">
+        <a href="cricket_live_result.php?id=<?php echo $match_id; ?>" class="endm" >  END MATCH </a>
         </span>
         </div>
   </div>

@@ -54,9 +54,47 @@
 		<link rel="stylesheet" href="../content/sidebar/css/style.css">
     <link rel="stylesheet" href="../content/multi_step/fonts/material-icon/css/material-design-iconic-font.min.css">  
     <link rel="stylesheet" href="../content/multi_step/css/style.css">
+    <style type="text/css">
 
+    .teams{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      margin-bottom: 7%;
+    }
+    .des{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      margin-bottom: 7%;
+      
+    }
+    .ini{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      margin-bottom: 7%;
+    }
+
+    .msc{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    .sbt{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    .bt{
+      background-color:#383bf5;
+      color: white;
+    }
+  </style>
   </head>
-  <body>
+  <body style="font-family: Arial, Helvetica, sans-serif;">
 		
     <?php
       include("header.php");
@@ -126,33 +164,33 @@
 
       <!-- Page Content  -->
 
-      <div class="row">
-      <div class="col-lg-12 col-lg-offset-0" style="background: black;">
+      <div class="msc">
+      <div class="">
       <br><br>
         <div class="panel panel-success">
-          <div style="color: white; background:black;" class="panel-heading">
-            <center>Add Result
+          <div style="color: white; background:black; text-align: center;" class="panel-heading">
+            Add Result
           </div>
           <div style="color: black; " class="panel-body  panel-danger">
           <div id="design">
             <form method="POST">
               <input type="hidden" value="<?php echo$event_id;?>" name="event_id" />
               <input type="hidden" value="<?php echo$match_id;?>" name="match_id" />
-            
-              <div class="col-lg-3">
-                TEAM 1 
-                <input type="text" placeholder="" value="<?php echo$row[2];?>" name="team1" required 
-            class="form-control" disabled  />  
 
+            <div class="teams">
+              <div> 
+                <p style="text-align: center;">TEAM 1</p> 
+                <input type="text" placeholder="" value="<?php echo$row[2];?>" name="team1" required  class="form-control" disabled  />  
               </div>
-              <div class="col-lg-1 col-lg-offset-2"><BR>
+              <div>
                 V/S
               </div>
-              <div class="col-lg-3 col-lg-offset-2">
-                TEAM 2 
+              <div>
+              <p style="text-align: center;">TEAM 1</p>
                 <input type="text" placeholder="" name="team2" value="<?php echo$row[3];?>" required disabled class="form-control" /> 
-              </div>  
-                      
+              </div> 
+            </div> 
+               <div class="ini">        
               <?php 
 
               $match_id=$_GET['id'];
@@ -169,7 +207,7 @@
                   $overs=$row['overs'];
                   $inning=$row['inning'];
                   
-                        echo "<div class='col-lg-3' align='center'>";
+                        echo "<div style='text-align: center;'>";
                         echo "TEAM $inning SCORE"; 
                         echo "<input type='text' name='team".$inning."_score' value='".$runs."/".$wickets." (".$overs.")' required class='form-control' /> 
                             </div>";
@@ -177,24 +215,21 @@
               }
               }
               ?>
-              <div class="row">
-                <div class="col-lg-10">
-                  <br/><br/>
-                  DESCRIPTION / FINAL STATUS 
-                </div> 
-              </div>
-              <div class="row">
-                <div class="col-lg-5 col-lg-offset-3">
+               </div>
+              
+                <div class="dis">
+                  <div class="form-group">
+                  <label>Description/Final Status</label> 
                   <input type="text" placeholder="India won by 15 runs" name="description" required class="form-control" />
-                </div>
-                <br><br><br>
-
-                <div class="row">
-                  <div class="col-lg-3 col-lg-offset-4">
-                    <input type="submit" name="btSubmit" id="button1" value="Save" class="form-control">
                   </div>
                 </div>
-              </div>  
+                
+                <div class="sbt">
+                  
+                    <input type="submit" name="btSubmit" id="button1" value="Save" class="bt">
+                 
+                </div>
+               
             </form>
           </div> 
         </div>
