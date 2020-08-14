@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Live Score</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -146,15 +146,24 @@
 			grid-template-columns: 1fr;
 			justify-items: center;
 		}
+		.liv-btn{
+			display: grid;
+			grid-template-columns: 1fr 1f 1fr 1fr;
+			grid-gap: 5%;		
+			margin: 20%;
+
+		}
 	</style>
 </head>
 <body>
 
 <div class="container">
+	<div class="liv-btn">
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#lfootball">Football</button>
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#lcricket">Cricket</button>
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#lhockey">Hockey</button>
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#lvollyball">Vollyball</button>
+	</div>
 
   <!-- Modal Football -->
   <div class="modal fade" id="lfootball" role="dialog">

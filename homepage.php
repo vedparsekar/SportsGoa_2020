@@ -115,7 +115,7 @@ error_reporting(0);
 			$password = $_POST['password'];
 			//$pass=mt_rand(1000,10000);
 			//$password=md5($pass);
-			$sql = "INSERT INTO  users(user_name,name,email,password,type) VALUES(:name,:name,:email,:password,:usertype)";
+			$sql = "INSERT INTO  users(user_name,name,email,phone,password,type) VALUES(:name,:name,:email,:mobile,:password,:usertype)";
 			$query = $dbh->prepare($sql);
 			$query->bindParam(':name', $name, PDO::PARAM_STR);
 			$query->bindParam(':email', $email, PDO::PARAM_STR);
@@ -126,6 +126,35 @@ error_reporting(0);
 			$lastInsertId = $dbh->lastInsertId();
 			if ($lastInsertId) {
 				echo "<script>alert('Registration successfull.Now you can login');</script>";
+			} else {
+				echo "<script>alert('Something went wrong. Please try again');</script>";
+			}
+		}
+	}
+
+
+	if (isset($_POST['edit'])) {
+		if ($_POST['password'] != $_POST['cpassword']) {
+			echo "<script>alert('Passwords dont match. Please try again');</script>";
+		} else {
+			$name = $_POST['name'];
+			$email = $_POST['email'];
+			$mobile = $_POST['phone'];
+			//$password = md5($_POST['password']);
+			$usertype=$_POST['usertype'];
+			$password = $_POST['password'];
+			//$pass=mt_rand(1000,10000);
+			//$password=md5($pass);
+			$sql = "update users set user_name=:name,name=:name,email=:email,phone=:mobile,password=:password";
+			$query = $dbh->prepare($sql);
+			$query->bindParam(':name', $name, PDO::PARAM_STR);
+			$query->bindParam(':email', $email, PDO::PARAM_STR);
+			$query->bindParam(':mobile', $mobile, PDO::PARAM_STR);
+			$query->bindParam(':password', $password, PDO::PARAM_STR);
+			$query->execute();
+			$lastInsertId = $dbh->lastInsertId();
+			if ($lastInsertId) {
+				echo "<script>alert('Profile Updated');</script>";
 			} else {
 				echo "<script>alert('Something went wrong. Please try again');</script>";
 			}
@@ -218,7 +247,7 @@ error_reporting(0);
 					</div>
 					<div>
 						<label><b>Phone</b></label>
-						<input type="text" placeholder="<?php echo htmlentities($result->name);
+						<input type="text" placeholder="<?php echo htmlentities($result->phone);
 													
 												 ?>" name="phone">
 					</div>
@@ -228,11 +257,11 @@ error_reporting(0);
 				<div class="ed-contact-details">
 					<div>
 
-						<input type="password" placeholder="Old Password" name="password" required>
+						<input type="password" value="<?php echo htmlentities($result->password);?>" name="password">
 					</div>
 					<div>
 
-						<input type="password" placeholder="New Password" name="cpassword" required>
+						<input type="password" value="<?php echo htmlentities($result->password);?>" name="cpassword">
 					</div>
 				</div>
 				<br />

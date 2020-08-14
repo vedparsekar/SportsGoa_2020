@@ -107,12 +107,13 @@ error_reporting(0);
 			$password = $_POST['password'];
 			//$pass=mt_rand(1000,10000);
 			//$password=md5($pass);
-			$sql = "INSERT INTO  users(user_name,name,email,password) VALUES(:name,:name,:email,:password)";
+			$sql = "INSERT INTO  users(user_name,name,email,phone,password,type) VALUES(:name,:name,:email,:mobile,:password,:usertype)";
 			$query = $dbh->prepare($sql);
 			$query->bindParam(':name', $name, PDO::PARAM_STR);
 			$query->bindParam(':email', $email, PDO::PARAM_STR);
 			$query->bindParam(':mobile', $mobile, PDO::PARAM_STR);
 			$query->bindParam(':password', $password, PDO::PARAM_STR);
+			$query->bindParam(':usertype', $usertype, PDO::PARAM_STR);
 			$query->execute();
 			$lastInsertId = $dbh->lastInsertId();
 			if ($lastInsertId) {
@@ -157,6 +158,12 @@ error_reporting(0);
 						<input type="password" placeholder="Confirm Password" name="cpassword" required>
 					</div>
 				</div>
+				<select name="usertype" id="user_type" class="regform-content" style="width:100%;">
+				<option value="user">User</option> 
+                <option value="subcriber">Subcriber</option>  
+                <option value="subuser">Subuser</option> 
+                 
+              </select>
 				<br />
 				<a href="#"><input type="submit" class="reg-btn" value="Signup" name="signup" id="signup"></a>
 			</div>
