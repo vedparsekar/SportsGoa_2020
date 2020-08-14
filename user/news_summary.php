@@ -139,7 +139,7 @@
               echo "<div class='row'>";
               echo "<div class='col-sm-offset-2 col-sm-7'>";
                 echo "<div class='panel panel-success'>";
-                 echo " <div style='color: white; background:black;' class='panel-heading'>";
+                 echo " <div style='color: white; background-color: #b92d2d;;' class='panel-heading'>";
                  echo"  <center>".$row['heading']."</center>";
                 echo "    </div>";
                 echo "<div style='color: black; background:white;  class='panel-body'>";
@@ -176,8 +176,7 @@
               echo " <div class='row'>
                   <div class='col-lg-10 col-lg-offset-1' >
                   <br>
-                  <b><center>*Description*</center></b>
-                    <div style='font-size:20px;'> ".$row['description']."</div><br>
+                    <div style='font-size:15px;'> ".$row['description']."</div><br>
 
                 </div>
               </div>";

@@ -97,7 +97,7 @@
                     <div style='border-bottom:1px #e8e8e8 solid;background-color:black;padding:8px;font-size:13px;font-weight:700;color:#45484d;text-transform:uppercase;'>
                        <b style='font-size:15px;'><center><a href='news_summary.php?id=".$row['news_id']."'><center><div style='color:white;'>".$row['heading']."</div></center></a></center></b></div>
 
-                    <div style='padding:8px;font-size:20px;height:100px;'>
+                    <div style='padding:8px;font-size:15px;height:100px;'>
                   
                    <img src='news_images/".$row['pic']."' style='margin-top:-8px;margin-left:-8px;float:left;height:100px;width:200px;'>
               <br>
@@ -113,7 +113,7 @@
         else
         {
           echo "<div>
-          <h6 style='font-size:30px;color:black;margin-top:40px;'> Sorry!... No News Article  or Summary of the Tournament has been Posted Yet.
+          <h6 style='font-size:20px;color:black;margin-top:40px;'> Sorry!... No News Article  or Summary of the Tournament has been Posted Yet.
           <br> Be in Touch, we'll add soon.</h6>"; 
         }
         echo "</div>"; 
