@@ -164,9 +164,31 @@
 
     }
 
+    .fixf{
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      margin:5%;
+      grid-gap: 2%;
+    }
+
+    .sbt{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      margin-bottom: 5%;
+    }
+    .bt{
+      background-color:#383bf5;
+      color: white;
+      border-style: none;
+      border-radius: 4px;
+      padding: 10px;
+      width: 60%;
+    }
+
     </style>    
   </head>
-  <body>
+  <body style="font-family: Arial, Helvetica, sans-serif;">
 		
     <?php
       include("header.php");
@@ -333,37 +355,37 @@
 
    <div class="modal fade" id="Add_fixture">
     <div class="modal-dialog">
-      <div class="modal-content abc" style="background: url('../content/multi_step/images/nike.png');background-size: 500px 480px;height:550px;text-align: center;display: inline-block;">
-        <div style="margin-left: 30px;">
-          <h2 style="margin-bottom: 0px;"> Add Fixture </h2>
+      <div class="modal-content">
+        <div>
+          <h2 style="color: black;"> Add Fixture </h2>
           <br>
-        <form method="post" class="form121" id="Add_Fixture_Form">
+        <form method="post" class="for121" id="Add_Fixture_Form">
           <input type="text" value="<?php echo $event_id; ?>" id="event_id" name="event_id" hidden>
           <input type="text" value="" id="match_id" name="match_id" hidden>
-          <div class="form-group">
-          <b>Team1</b> <input type="text" placeholder="Team1" id="team1" name="team1" required>
+          <div class="fixf">
+          <div style="color: black;text-align: right; font-size:13px;">Team1</div> <input type="text" placeholder="Team1" id="team1" name="team1" class="form-control" required>
           </div>
 
-          <div class="form-group">
-          <b>Team2</b> <input type="text" placeholder="Team2" id="team2" name="team2" required>
+          <div class="fixf">
+          <div style="color: black;text-align: right; font-size:13px;">Team2</div><input type="text" placeholder="Team2" id="team2" name="team2" class="form-control" required>
           </div>          
                     
-          <div class="form-group">
-          <b>Location</b>  <input type="text" placeholder="Venue" name="place" id="place" required >
+          <div class="fixf">
+          <div style="color: black;text-align: right; font-size:13px;">Location</div>  <input type="text" placeholder="Venue" name="place" id="place" class="form-control" required >
           </div>
           
-          <div class="form-group">
-          <b>Date</b>  <input type="date" placeholder="" id="t_date" name="t_date" required>
+          <div class="fixf">
+          <div style="color: black;text-align: right; font-size:13px;">Date</div>  <input type="date" placeholder="" id="t_date" name="t_date" class="form-control" required>
           </div>
           
-          <div class="form-group">
-          <b>Time</b>  <input type="TIME" placeholder="Time" id="t_time" name="t_time" required>
+          <div class="fixf">
+          <div style="color: black;text-align: right; font-size:13px;">Time</div>  <input type="TIME" placeholder="Time" id="t_time" name="t_time" class="form-control" required>
           </div>
           
           <br />
           <input type="text" value="add_fixture" name="info" id="info" hidden>
-          <div style="align-content: center;margin-top: -15px;">
-            <button type="submit" style="" class="reg-btn" name="signup" id="submit">Submit</button>
+          <div class="sbt">
+            <button type="submit"  class="bt" name="signup" id="submit">Submit</button>
           </div>
         </form>
         </div>
