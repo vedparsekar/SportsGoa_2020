@@ -30,6 +30,12 @@
 		}
 		.scr {
 			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 1em;
+		}
+
+		.cscr {
+			display: grid;
 			grid-template-columns: 1fr;
 			grid-gap: 1em;
 		}
@@ -345,7 +351,7 @@
 	<form method="GET">
 		<h3 class="match">CRICKET</h3>
 		<input type="hidden" name="match_id" id="team123" value="<?php //echo $match_id; ?>" ></input><br/>
-		<div class="scr">
+		<div class="cscr">
 		<div class="s1">
 			<div>
 				<input class="teamname" type="text" name="" value="<?php //echo $team1_name;?>"  readonly></input>
@@ -359,19 +365,19 @@
 				<p style="color: white">RUNS:</p>
 				<button onclick="pass(this.value)" value="1" id="onebutton" name="button" align="center">+1</button>
 				<button onclick="rass(this.value)" value="1"  id="minusbutton" name="button" align="center">-1</button>
-				<button onclick="ps(this.value)" value="1" class="sixbutton" name="button" align="center">6</button>
-				<button onclick="ss(this.value)" value="1" class="fourbutton" name="button" align="center">4</button>
+				<button onclick="ps(this.value)" value="6" class="sixbutton" name="button" align="center">6</button>
+				<button onclick="ss(this.value)" value="4" class="fourbutton" name="button" align="center">4</button>
 				<button onclick="ss(this.value)" value="1" class="wicket" name="button" align="center">W</button>
+				<button onclick="ss(this.value)" value="1" class="wicket" name="button" align="center">NB</button>
 			</div>
 			<div>
 			<p style="color: white">OVERS:</p>
 				<button onclick="pass(this.value)" value="1" id="onebutton" name="button" align="center">+1</button>
 				<button onclick="rass(this.value)" value="1"  id="minusbutton" name="button" align="center">-1</button>
 			</div>
-		</div>
-	
-		
 
+			<a href="?id=<?php //echo $match_id; ?>" class="ed">  SECOND INNIG </a>
+		</div>
 		</div>
 	</form>	
 	<div class="end">
@@ -385,6 +391,10 @@
       </div> 
     </div>
   </div>
+
+
+
+
   
 
 </div>
