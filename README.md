@@ -37,7 +37,15 @@ HTML, CSS, AJAX, JavaScript, jQuery, php and bootstrap (front-end framework)
 
 
 # Screenshots
+
+## Homepage
 ![Homepage](https://github.com/vedparsekar/SportsGoa_2020/blob/master/screenshots/homepage.png)
+
+## Login
 ![Homepage login](https://github.com/vedparsekar/SportsGoa_2020/blob/master/screenshots/login.png)
+
+## Match Reults
 ![Match](https://github.com/vedparsekar/SportsGoa_2020/blob/master/screenshots/matches.png)
+
+## Sports News
 ![News](https://github.com/vedparsekar/SportsGoa_2020/blob/master/screenshots/news.png)
