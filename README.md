@@ -23,9 +23,9 @@ HTML, CSS, AJAX, JavaScript, jQuery, php and bootstrap (front-end framework)
  
  OR follow gitbash commands
 
-    ```cd C:\\xampp\htdocs\```
+    cd C:\\xampp\htdocs\
 
-    ```git clone https://github.com/vedparsekar/SportsGoa_2020.git ```
+    git clone https://github.com/vedparsekar/SportsGoa_2020.git 
 
 4. extract files in C:\\xampp\htdocs\.
 
