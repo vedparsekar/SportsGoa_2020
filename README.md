@@ -34,3 +34,10 @@ HTML, CSS, AJAX, JavaScript, jQuery, php and bootstrap (front-end framework)
 8. After creating database name click on import, and browse the file in directory [database/sportsgoa2020.sql].
 
 10. Open any browser and type http://localhost/SportsGoa 2020.
+
+
+# Screenshots
+![Homepage](https://github.com/vedparsekar/SportsGoa_2020/content/images/4.jpg)
+![Homepage login](https://github.com/vedparsekar/SportsGoa_2020/content/images/4.jpg)
+![Match](https://github.com/vedparsekar/SportsGoa_2020/content/images/4.jpg)
+![News](https://github.com/vedparsekar/SportsGoa_2020/content/images/4.jpg)
