@@ -27,10 +27,10 @@ HTML, CSS, AJAX, JavaScript, jQuery, php and bootstrap (front-end framework)
 
     git clone https://github.com/vedparsekar/SportsGoa_2020.git 
 
-4. extract files in C:\\xampp\htdocs\.
+4. Extract files in C:\\xampp\htdocs\.
 
-5. open link localhost/phpmyadmin , create database (sportsgoa) hit on create button.
+5. Open link localhost/phpmyadmin , create database (sportsgoa) hit on create button.
 
-8. after creating database name click on import, and browse the file in directory [database/sportsgoa2020.sql].
+8. After creating database name click on import, and browse the file in directory [database/sportsgoa2020.sql].
 
-10. open any browser and type http://localhost/SportsGoa 2020.
+10. Open any browser and type http://localhost/SportsGoa 2020.
